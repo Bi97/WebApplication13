@@ -14,6 +14,7 @@ namespace WebApplication13.Models
         [Required]
         public double SoLuong { get; set; }
         public string MoTa { get; set; }
+        
 
 
 

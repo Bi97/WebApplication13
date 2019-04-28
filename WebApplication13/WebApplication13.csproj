@@ -193,6 +193,7 @@
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\ViewModel\SanPhamViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -1375,11 +1376,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\LayoutAdmin\_LayoutAdmin.cshtml" />
     <Content Include="Scripts\material-dashboard.js.map" />
+    <Content Include="Views\SanPham\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\SanPham\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
