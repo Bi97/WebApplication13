@@ -11,6 +11,8 @@ namespace WebApplication13.Controllers
         // GET: SanPham
         public ActionResult Create()
         {
+
+
             return View();
         }
     }
