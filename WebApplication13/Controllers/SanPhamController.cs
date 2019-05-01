@@ -23,12 +23,14 @@ namespace WebApplication13.Controllers
         {
             var viewModel = new SanPhamViewModel
             {
-                LoaiSPs = _dbcontext.LoaiSPs.ToList()
+                LoaiSPs = _dbcontext.LoaiSPs.ToList(),
+                NhaCungCaps = _dbcontext.NhaCungCaps.ToList()
             };
 
             return View(viewModel);
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Create(SanPhamViewModel viewModel)
         {
             var sanpham = new SanPham
@@ -36,7 +38,8 @@ namespace WebApplication13.Controllers
                 TenSP = viewModel.TenSP,
                 SoLuong = viewModel.SoLuong,
                 MoTa = viewModel.MoTa,
-                LoaiSPId = viewModel.LoaiSP
+                LoaiSPId = viewModel.LoaiSP,
+                NhaCungCapId = viewModel.NhaCungCap
 
             };
             _dbcontext.SanPhams.Add(sanpham);

@@ -14,13 +14,13 @@ namespace WebApplication13.Models
         [Required]
         public double SoLuong { get; set; }
         public string MoTa { get; set; }
-        
 
+        public NhaCungCap NhaCungCap { get; set; }
+        public int NhaCungCapId { get; set; }
 
 
         public LoaiSP LoaiSP { get; set; }
         [Required]
         public int LoaiSPId { get; set; }
-        
     }
 }
