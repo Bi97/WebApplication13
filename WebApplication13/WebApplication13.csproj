@@ -170,7 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Controllers\User\TrangChuUserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -182,6 +182,10 @@
     <Compile Include="Migrations\201905011523407_1.cs" />
     <Compile Include="Migrations\201905011523407_1.Designer.cs">
       <DependentUpon>201905011523407_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905011624376_11111.cs" />
+    <Compile Include="Migrations\201905011624376_11111.Designer.cs">
+      <DependentUpon>201905011624376_11111.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1374,9 +1378,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Layout\_LayoutAdmin.cshtml" />
     <Content Include="Scripts\material-dashboard.js.map" />
-    <Content Include="Views\SanPham\Create.cshtml" />
     <Content Include="Views\Layout\_LayoutUser.cshtml" />
     <Content Include="Views\TrangChuUser\Index.cshtml" />
+    <Content Include="Views\SanPhams\Create.cshtml" />
+    <Content Include="Views\SanPhams\Delete.cshtml" />
+    <Content Include="Views\SanPhams\Details.cshtml" />
+    <Content Include="Views\SanPhams\Edit.cshtml" />
+    <Content Include="Views\SanPhams\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1402,6 +1410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905011523407_1.resx">
       <DependentUpon>201905011523407_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905011624376_11111.resx">
+      <DependentUpon>201905011624376_11111.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

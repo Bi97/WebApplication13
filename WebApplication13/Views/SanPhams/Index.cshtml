@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebApplication13.Models.SanPham>
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+                Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Thêm Sản Phẩm", "Create")
+</p>
+
+
+<div class="col-md-10 ml-md-5 ">
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-success text-center" style="font-size:30px">Danh Sách Sản Phẩm</h5>
+            <table class="table table-bordered table-striped table-hover">
+                <tr style="font-size:18px; color:red">
+                    <th>
+                        @Html.DisplayName("Mã Sản Phẩm")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Tên Sản Phẩm")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Nhà Cung Cấp")
+                    </th>
+                    <th>
+
+                        @Html.DisplayName("Loại Sản Phẩm")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Số Lượng")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Mô Tả")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Chức Năng")
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SanPhamId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenSP)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhaCungCap.TenNhaCungCap)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LoaiSP.TenLoai)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoLuong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MoTa)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.SanPhamId }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.SanPhamId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.SanPhamId })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
