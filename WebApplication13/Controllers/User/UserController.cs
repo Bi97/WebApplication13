@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApplication13.Controllers.User
 {
-    public class TrangChuUserController : Controller
+    public class UserController : Controller
     {
         // GET: TrangChuUser
         public ActionResult Index()
