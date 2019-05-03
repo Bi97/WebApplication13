@@ -1,0 +1,279 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/jquery-minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/quill/dist/quill.snow.css">
+    <link href="~/Admin/dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/extra-libs/multicheck/multicheck.css">
+    <link href="~/Admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="~/Admin/dist/css/style.min.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.wrappixel.com/ampleadmin/assets/images/favicon.png">
+    <title>Ample admin Template - The Ultimate Multipurpose admin template</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="~/Content/BanHang/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader" style="display: none;">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="overlay" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full" class="hide-sidebar">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper mt-0" style="display: block; padding-top:0px;">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="page-content container-fluid" style="padding-top:5px; padding-bottom:0px;">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Table -->
+                <!-- ============================================================== -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <div style="width:100%;">
+
+                                    <div class="form-group input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="mdi mdi-magnify"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control sapo-textbox" style="padding-left: 25px;" id="manual-list-variant-search-input" placeholder="Tìm kiếm sản phẩm">
+                                    </div>
+                                 
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Photo</th>
+                                                <th>Product</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="~/Content/BanHang/chair.jpg" alt="iMac" width="80"></td>
+                                                <td>Rounded Chair</td>
+                                                <td>20</td>
+                                                <td class="font-500">$153</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="font-500" align="right">Total Amount</td>
+                                                <td class="font-500">$153</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <hr>
+                                <h5 class="card-title">Choose payment Option</h5>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="nav-item">
+                                        <a href="#iprofile" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" aria-selected="true">
+                                            <span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Thanh Toán</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="nav-item">
+                                        <a href="#ihome" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false" aria-selected="false">
+                                            <span class="visible-xs"><i class="ti-user"></i></span>
+                                            <span class="hidden-xs">Thông Tin Khách Hàng</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane" id="ihome">
+                                        <div class="row">
+                                            <label>success</label>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane active" id="iprofile">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <form>
+                                                    <div class="form-group input-group mt-5">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fab fa-cc-visa"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" placeholder="Card Number" aria-label="Amount (to the nearest dollar)">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-7 col-md-7">
+                                                            <div class="form-group">
+                                                                <label>EXPIRATION DATE</label>
+                                                                <input type="text" class="form-control" name="Expiry" placeholder="MM / YY" required="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-5 col-md-5 pull-right">
+                                                            <div class="form-group">
+                                                                <label>CV CODE</label>
+                                                                <input type="text" class="form-control" name="CVC" placeholder="CVC" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label>NAME OF CARD</label>
+                                                                <input type="text" class="form-control" name="nameCard" placeholder="NAME AND SURNAME">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-info">Make Payment</button>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 ml-auto">
+                                                <h4 class="card-title mt-4">General Info</h4>
+                                                <h2><i class="fab fa-cc-visa text-info"></i> <i class="fab fa-cc-mastercard text-danger"></i> <i class="fab fa-cc-discover text-success"></i> <i class="fab fa-cc-amex text-warning"></i></h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- customizer Panel -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="~/Content/BanHang/jquery.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Content/BanHang/popper.js"></script>
+    <script src="~/Content/BanHang/bootstrap.js"></script>
+    <!-- apps -->
+    <script src="~/Content/BanHang/app.js"></script>
+    <script src="~/Content/BanHang/app_002.js"></script>
+    <script src="~/Content/BanHang/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="~/Content/BanHang/perfect-scrollbar.js"></script>
+    <script src="~/Content/BanHang/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="~/Content/BanHang/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="~/Content/BanHang/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/Content/BanHang/custom.js"></script>
+    <script src="~/Admin/assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="~/Admin/dist/js/pages/mask/mask.init.js"></script>
+    <script src="~/Admin/assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Admin/assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="~/Admin/assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+    <script src="~/Admin/assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+    <script src="~/Admin/assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+    <script src="~/Admin/assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+    <script src="~/Admin/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Admin/assets/libs/quill/dist/quill.min.js"></script>
+    <script src="~/Scripts/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/Admin/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+    <script src="~/Admin/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+    <script src="~/Admin/assets/extra-libs/DataTables/datatables.min.js"></script>
+
+
+</body>
+</html>
