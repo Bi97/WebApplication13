@@ -5,9 +5,23 @@ namespace WebApplication13.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        private const string V = "Mật khẩu phải tối đa {0} ký tự và tối thiểu {2} ký tự";
+        private const int V1 = 6;
+
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ, xin kiểm tra lại")]
+        [DataType(DataType.Password)]
         public string Email { get; set; }
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu")]
+       
+        [DataType(DataType.Password)]
+        [Display(Name ="Mật khẩu")]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Xác thực mật khẩu")]
+        [Compare("Password", ErrorMessage ="Mật khẩu và xác thực không khớp.")]
+        public string ConfirmPassword { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -106,7 +120,7 @@ namespace WebApplication13.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Knplong97@gmail.com")]
         public string Email { get; set; }
     }
 }
