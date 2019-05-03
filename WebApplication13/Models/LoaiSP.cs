@@ -11,6 +11,6 @@ namespace WebApplication13.Models
     {
         public int LoaiSPId { get; set; }
         [Required]
-        public string TenSP { get; set; }
+        public string TenLoai { get; set; }
     }
 }
