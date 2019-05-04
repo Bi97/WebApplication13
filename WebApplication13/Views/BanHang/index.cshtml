@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
+    <link href="~/Content/floating-label.css" rel="stylesheet">
+    <link href="~/Content/table_files/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/select2/dist/css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/jquery-minicolors/jquery.minicolors.css">
     <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
@@ -112,20 +114,20 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                
+
                                 <div style="width:100%;">
 
-                                    <div class="form-group input-group">
+                                    <div class="form-group input-group mb-2">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="mdi mdi-magnify"></i></span>
+                                            <span class="form-control search"><i class="mdi mdi-magnify"></i></span>
                                         </div>
                                         <input type="text" class="form-control sapo-textbox" style="padding-left: 25px;" id="manual-list-variant-search-input" placeholder="Tìm kiếm sản phẩm">
                                     </div>
-                                 
+
                                 </div>
-                                <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                        <thead>
+                                <div class="table-responsive ">
+                                    <table class="table color-bordered-table red-bordered-table ">
+                                        <thead style="color:red;" class="mt-1">
                                             <tr>
                                                 <th>Photo</th>
                                                 <th>Product</th>
@@ -148,15 +150,18 @@
                                     </table>
                                 </div>
                                 <hr>
-                                <h5 class="card-title">Choose payment Option</h5>
+
+
+                                <h5 class="card-title mt-5"></h5>
+
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="nav-item">
-                                        <a href="#iprofile" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" aria-selected="true">
+                                    <li role="presentation" class="nav-item" style="color:aqua">
+                                        <a href="#iprofile" style="color:blue" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" aria-selected="true">
                                             <span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Thanh Toán</span>
                                         </a>
                                     </li>
                                     <li role="presentation" class="nav-item">
-                                        <a href="#ihome" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false" aria-selected="false">
+                                        <a href="#ihome" style="color:blue" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false" aria-selected="false">
                                             <span class="visible-xs"><i class="ti-user"></i></span>
                                             <span class="hidden-xs">Thông Tin Khách Hàng</span>
                                         </a>
@@ -169,47 +174,58 @@
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane active" id="iprofile">
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <form>
-                                                    <div class="form-group input-group mt-5">
+                                        <div class="row ml-3">
+                                            <div class="col-md-5">                                             
+                                                <form >                                                  
+                                                    <label class="mt-2 font-weight-bold" style="font-size:15px"> Chiết Khấu: </label>
+                                                    <div class="form-group input-group mt-3">
                                                         <div class="input-group-prepend">
-                                                            <span class="input-group-text"><i class="fab fa-cc-visa"></i></span>
+                                                            <span class="input-group-text" style="color:red">Chiết Khấu :</span>
                                                         </div>
-                                                        <input type="text" class="form-control" placeholder="Card Number" aria-label="Amount (to the nearest dollar)">
+                                                        <input type="text" class="form-control col-md-4" placeholder="">
+
+
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-xs-7 col-md-7">
-                                                            <div class="form-group">
-                                                                <label>EXPIRATION DATE</label>
-                                                                <input type="text" class="form-control" name="Expiry" placeholder="MM / YY" required="">
-                                                            </div>
+
+                                                    <div class="form-group input-group mt-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" style="color:red">Tổng Tiền : </span>
                                                         </div>
-                                                        <div class="col-xs-5 col-md-5 pull-right">
-                                                            <div class="form-group">
-                                                                <label>CV CODE</label>
-                                                                <input type="text" class="form-control" name="CVC" placeholder="CVC" required="">
-                                                            </div>
-                                                        </div>
+                                                        <input type="text" class="form-control col-md-4" placeholder="">
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label>NAME OF CARD</label>
-                                                                <input type="text" class="form-control" name="nameCard" placeholder="NAME AND SURNAME">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <button class="btn btn-info">Make Payment</button>
+                                                   
                                                 </form>
                                             </div>
-                                            <div class="col-md-4 ml-auto">
-                                                <h4 class="card-title mt-4">General Info</h4>
-                                                <h2><i class="fab fa-cc-visa text-info"></i> <i class="fab fa-cc-mastercard text-danger"></i> <i class="fab fa-cc-discover text-success"></i> <i class="fab fa-cc-amex text-warning"></i></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                            <div class="col-md-5 ml-1">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <form>
+                                                            <label class="mt-2 font-weight-bold" style="font-size:15px"> Khách Hàng Phải Trả :</label>
+                                                            <div class="form-group input-group mt-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" style="color:red">Total :</span>
+                                                                </div>
+                                                                <input type="text" class="form-control col-md-7" placeholder="">
+                                                            </div>
+                                                            <div class="floating-labels m-t-40">
+                                                                <div class="form-group col-10 ">
+                                                                    <input type="text" class="form-control" id="input1">
+                                                                    <span class="bar"></span>
+                                                                    <label for="input1">Tiền khách Đưa</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group input-group mt-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" style="color:red">Tiền Thừa:</span>
+                                                                </div>
+                                                                <input type="text" class="form-control  col-md-7" placeholder="">
+                                                            </div>
+                                                            <button class="btn btn-info">Xác Nhận Thanh Toán</button>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

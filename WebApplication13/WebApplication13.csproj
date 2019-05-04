@@ -1013,6 +1013,7 @@
     <Content Include="Content\DangNhap_files\logo-text.png" />
     <Content Include="Content\DangNhap_files\popper.js" />
     <Content Include="Content\DangNhap_files\style.css" />
+    <Content Include="Content\floating-label.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\material-dashboard-rtl.css" />
     <Content Include="Content\material-dashboard.css" />
@@ -1087,6 +1088,7 @@
     <Content Include="Content\Sell_files\webstomp.js" />
     <Content Include="Content\Sell_files\_all.css" />
     <Content Include="Content\Sell_files\_all_002.css" />
+    <Content Include="Content\table_files\style.css" />
     <Content Include="Content\TrangChu_files\1.jpg" />
     <Content Include="Content\TrangChu_files\2.jpg" />
     <Content Include="Content\TrangChu_files\3.jpg" />

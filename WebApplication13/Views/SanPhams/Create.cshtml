@@ -43,7 +43,7 @@
             </div>
 
             <div class="form-group">
-                @Html.Label("Nhà Cung Cấp", "NhaCungCapId", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.Label("Nhà Cung Cấp", htmlAttributes: new { @class = "control-label col-md-5" })
                 <div class="col-md-10">
                     @Html.DropDownList("NhaCungCapId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.NhaCungCapId, "", new { @class = "text-danger" })
@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group">
-                @Html.Label("Tên Loại", "LoaiSPId", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.Label("Tên Loại", htmlAttributes: new { @class = "control-label col-md-5" })
                 <div class="col-md-10">
                     @Html.DropDownList("LoaiSPId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.LoaiSPId, "", new { @class = "text-danger" })
