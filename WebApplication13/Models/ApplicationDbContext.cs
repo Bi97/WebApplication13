@@ -8,6 +8,7 @@ namespace WebApplication13.Models
 
         public DbSet<SanPham> SanPhams { get; set;  }
         public DbSet<LoaiSP> LoaiSPs { get; set;  }
+        public DbSet<NhaCungCap> NhaCungCaps { get; set;  }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

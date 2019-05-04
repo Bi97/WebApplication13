@@ -11,7 +11,9 @@ namespace WebApplication13.Models.ViewModel
         public double SoLuong { get; set; }
         public string MoTa { get; set; }
         public int LoaiSP { get; set; }
+        public int NhaCungCap { get; set; }
         public IEnumerable<LoaiSP> LoaiSPs { get; set; }
+        public IEnumerable<NhaCungCap> NhaCungCaps { get; set; }
 
     }
 }

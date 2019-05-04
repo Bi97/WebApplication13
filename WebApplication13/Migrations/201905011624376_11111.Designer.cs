@@ -7,13 +7,13 @@ namespace WebApplication13.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class PopulateLoaiSPTable : IMigrationMetadata
+    public sealed partial class _11111 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateLoaiSPTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_11111));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904280732354_PopulateLoaiSPTable"; }
+            get { return "201905011624376_11111"; }
         }
         
         string IMigrationMetadata.Source
