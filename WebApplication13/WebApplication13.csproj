@@ -1214,6 +1214,7 @@
     <Content Include="img\iphonex.png" />
     <Content Include="img\larrow.png" />
     <Content Include="img\line.png" />
+    <Content Include="img\login-register.jpg" />
     <Content Include="img\login_1.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\logologin.jpg" />
@@ -1494,7 +1495,9 @@
     <Content Include="Scripts\plugins\nouislider.min.js" />
     <Content Include="Scripts\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Scripts\plugins\sweetalert2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1540,6 +1543,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\BanHang\BanHang.cshtml" />
     <Content Include="Views\BanHang\index.cshtml" />
+    <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
