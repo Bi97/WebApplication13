@@ -9,7 +9,7 @@ namespace WebApplication13.Controllers.Admin
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult TrangChu()
         {
             return View();
         }
