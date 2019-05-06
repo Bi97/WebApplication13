@@ -963,6 +963,16 @@
     <Content Include="Admin\dist\js\pages\sparkline\jquery.charts-sparkline.js" />
     <Content Include="Admin\dist\js\sidebarmenu.js" />
     <Content Include="Admin\dist\js\waves.js" />
+    <Content Include="Content\address_files\bootstrap.css" />
+    <Content Include="Content\address_files\bootstrap.js" />
+    <Content Include="Content\address_files\custom.js" />
+    <Content Include="Content\address_files\default.css" />
+    <Content Include="Content\address_files\jquery.js" />
+    <Content Include="Content\address_files\jquery_002.js" />
+    <Content Include="Content\address_files\popper.js" />
+    <Content Include="Content\address_files\sticky-kit.js" />
+    <Content Include="Content\address_files\style.css" />
+    <Content Include="Content\address_files\waves.js" />
     <Content Include="Content\AdminLogin\bootstrap-responsive.css" />
     <Content Include="Content\AdminLogin\bootstrap.css" />
     <Content Include="Content\AdminLogin\css.css" />
@@ -1026,6 +1036,7 @@
     <Content Include="Content\DangNhap_files\logo-text.png" />
     <Content Include="Content\DangNhap_files\popper.js" />
     <Content Include="Content\DangNhap_files\style.css" />
+    <Content Include="Content\floating-label.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\material-dashboard-rtl.css" />
     <Content Include="Content\material-dashboard.css" />
@@ -1100,6 +1111,7 @@
     <Content Include="Content\Sell_files\webstomp.js" />
     <Content Include="Content\Sell_files\_all.css" />
     <Content Include="Content\Sell_files\_all_002.css" />
+    <Content Include="Content\table_files\style.css" />
     <Content Include="Content\TrangChu_files\1.jpg" />
     <Content Include="Content\TrangChu_files\2.jpg" />
     <Content Include="Content\TrangChu_files\3.jpg" />
@@ -1487,6 +1499,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\mask.js" />
     <Content Include="Scripts\material-dashboard.js" />
     <Content Include="Scripts\material-dashboard.min.js" />
     <Content Include="Scripts\matrix.js" />
@@ -1544,10 +1557,10 @@
     <Content Include="Views\SanPhams\Details.cshtml" />
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
-    <Content Include="Views\Admin\TrangChu.cshtml" />
     <Content Include="Views\BanHang\BanHang.cshtml" />
     <Content Include="Views\BanHang\index.cshtml" />
     <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
+    <Content Include="Views\Admin\TrangChu.cshtml" />
     <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

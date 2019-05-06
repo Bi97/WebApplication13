@@ -1,10 +1,32 @@
 ﻿@{
     ViewBag.Title = "Confirm Email";
+    Layout = "~/Views/Layout/_LayoutDangNhapAdmin.cshtml";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div>
-    <p>
-        Thank you for confirming your email. Please @Html.ActionLink("Click here to Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
-    </p>
+    
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
+    <div class="auth-box bg-dark border-top border-secondary">
+        <!-- Form -->
+        <div class="text-center mt-0 p-b-20 mb-4">
+            <span class="db mb-5"><img src="~/Admin/assets/images/logo.png" alt="logo" /></span>
+        </div>
+        <div class="row p-b-30">
+            <div class="col-12">
+                <div class="card"  style="background-color:lightcyan">
+                    <div class="card-header font-weight-bold text-center"style="background-color:cyan;color:dimgrey" >
+                        CONFIRM
+                    </div>
+                    <div class="text-success">
+                        <label class="text-center mt-3" style="padding-left:5em;">
+                            THANK YOU FOR JOINING US
+                            <div> <br />
+                            </div>
+                            PLEASE @Html.ActionLink("CLICK HERE", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) TO SIGN IN.
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
 </div>
