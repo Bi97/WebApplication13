@@ -62,12 +62,12 @@ namespace WebApplication13.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required (ErrorMessage= "Vui lòng Nhập Email") ]
         [Display(Name = "Email")]
-        [EmailAddress]
+        [EmailAddress (ErrorMessage = "Email Không Hợp Lệ")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Vui lòng Nhập Mật Khẩu")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }

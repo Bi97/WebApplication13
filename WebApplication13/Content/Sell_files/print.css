@@ -1,0 +1,23 @@
+@media print {
+        
+      
+        #controls, .footer, .footerarea{ display: none; }
+      html, body {
+        /*changing width to 100% causes huge overflow and wrap*/
+        height:100%; 
+        overflow: visible;
+        background: #FFF; 
+       
+      }	
+     
+   
+        tr    
+        { 
+ 
+          page-break-inside:avoid; 
+          page-break-after:auto;
+        }
+
+        
+    }
+

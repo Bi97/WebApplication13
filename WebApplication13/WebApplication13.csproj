@@ -181,10 +181,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\User\BanHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SanPhamController.cs" />
-    <Compile Include="Controllers\User\TrangChuUserController.cs" />
+    <Compile Include="Controllers\SanPhamsController.cs" />
+    <Compile Include="Controllers\User\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,13 +194,13 @@
     <Compile Include="Migrations\201904280722140_InititalModel.Designer.cs">
       <DependentUpon>201904280722140_InititalModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904280731163_CreateTableSanPham.cs" />
-    <Compile Include="Migrations\201904280731163_CreateTableSanPham.Designer.cs">
-      <DependentUpon>201904280731163_CreateTableSanPham.cs</DependentUpon>
+    <Compile Include="Migrations\201905011523407_1.cs" />
+    <Compile Include="Migrations\201905011523407_1.Designer.cs">
+      <DependentUpon>201905011523407_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904280732354_PopulateLoaiSPTable.cs" />
-    <Compile Include="Migrations\201904280732354_PopulateLoaiSPTable.Designer.cs">
-      <DependentUpon>201904280732354_PopulateLoaiSPTable.cs</DependentUpon>
+    <Compile Include="Migrations\201905011624376_11111.cs" />
+    <Compile Include="Migrations\201905011624376_11111.Designer.cs">
+      <DependentUpon>201905011624376_11111.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -206,6 +208,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\ViewModel\SanPhamViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -979,17 +982,166 @@
     <Content Include="Content\Admin\matrix-style.css" />
     <Content Include="Content\Admin\select2.css" />
     <Content Include="Content\Admin\uniform.css" />
+    <Content Include="Content\BanHang\1.jpg" />
+    <Content Include="Content\BanHang\2.jpg" />
+    <Content Include="Content\BanHang\3.jpg" />
+    <Content Include="Content\BanHang\4.jpg" />
+    <Content Include="Content\BanHang\5.jpg" />
+    <Content Include="Content\BanHang\6.jpg" />
+    <Content Include="Content\BanHang\7.jpg" />
+    <Content Include="Content\BanHang\8.jpg" />
+    <Content Include="Content\BanHang\app-style-switcher.js" />
+    <Content Include="Content\BanHang\app.js" />
+    <Content Include="Content\BanHang\app_002.js" />
+    <Content Include="Content\BanHang\bootstrap.js" />
+    <Content Include="Content\BanHang\chair.jpg" />
+    <Content Include="Content\BanHang\custom.js" />
+    <Content Include="Content\BanHang\img1.jpg" />
+    <Content Include="Content\BanHang\img2.jpg" />
+    <Content Include="Content\BanHang\img3.jpg" />
+    <Content Include="Content\BanHang\jquery.js" />
+    <Content Include="Content\BanHang\logo-icon.png" />
+    <Content Include="Content\BanHang\logo-light-icon.png" />
+    <Content Include="Content\BanHang\logo-light-text.png" />
+    <Content Include="Content\BanHang\logo-text.png" />
+    <Content Include="Content\BanHang\perfect-scrollbar.js" />
+    <Content Include="Content\BanHang\popper.js" />
+    <Content Include="Content\BanHang\sidebarmenu.js" />
+    <Content Include="Content\BanHang\sparkline.js" />
+    <Content Include="Content\BanHang\style.css" />
+    <Content Include="Content\BanHang\waves.js" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css.css" />
+    <Content Include="Content\DangNhap_files\bootstrap.css" />
+    <Content Include="Content\DangNhap_files\bootstrap.js" />
+    <Content Include="Content\DangNhap_files\default.css" />
+    <Content Include="Content\DangNhap_files\jquery.js" />
+    <Content Include="Content\DangNhap_files\login-register-lock.css" />
+    <Content Include="Content\DangNhap_files\login-register.jpg" />
+    <Content Include="Content\DangNhap_files\logo-icon.png" />
+    <Content Include="Content\DangNhap_files\logo-text.png" />
+    <Content Include="Content\DangNhap_files\popper.js" />
+    <Content Include="Content\DangNhap_files\style.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\material-dashboard-rtl.css" />
     <Content Include="Content\material-dashboard.css" />
     <Content Include="Content\material-dashboard.min.css" />
     <Content Include="Content\matrix-login.css" />
+    <Content Include="Content\Sell_files\120214.js" />
+    <Content Include="Content\Sell_files\293334697509343.js" />
+    <Content Include="Content\Sell_files\5407.js" />
+    <Content Include="Content\Sell_files\5407_002.js" />
+    <Content Include="Content\Sell_files\8f61dd96-7785-4c9c-be7d-e8574c55ff36.jpg" />
+    <Content Include="Content\Sell_files\a.htm" />
+    <Content Include="Content\Sell_files\admin.css" />
+    <Content Include="Content\Sell_files\analytics.js" />
+    <Content Include="Content\Sell_files\bf6b56cc-528b-47ad-8c8a-1f54649dae3b.jpg" />
+    <Content Include="Content\Sell_files\bootstrap-switch.css" />
+    <Content Include="Content\Sell_files\bootstrap-tagsinput.css" />
+    <Content Include="Content\Sell_files\bootstrap-tokenfield.css" />
+    <Content Include="Content\Sell_files\bootstrap.css" />
+    <Content Include="Content\Sell_files\box-90f3a29ef7448451db5af955688970d7.htm" />
+    <Content Include="Content\Sell_files\colorbox.css" />
+    <Content Include="Content\Sell_files\commoncss.css" />
+    <Content Include="Content\Sell_files\conversion_async.js" />
+    <Content Include="Content\Sell_files\custom.css" />
+    <Content Include="Content\Sell_files\d6a82aff-ee9e-4cfc-8c43-b6ab83dd0df1.jpg" />
+    <Content Include="Content\Sell_files\d8d67a65-fa45-4bd5-ba02-7d17eb6cfba4.jpg" />
+    <Content Include="Content\Sell_files\daterangepicker.css" />
+    <Content Include="Content\Sell_files\defaultAdmin.css" />
+    <Content Include="Content\Sell_files\defaultTheme.css" />
+    <Content Include="Content\Sell_files\dmuploader.js" />
+    <Content Include="Content\Sell_files\ebff4662-6daa-4c30-bf7b-a8218371e253.jpg" />
+    <Content Include="Content\Sell_files\fbevents.js" />
+    <Content Include="Content\Sell_files\font-awesome.css" />
+    <Content Include="Content\Sell_files\font.css" />
+    <Content Include="Content\Sell_files\grid.css" />
+    <Content Include="Content\Sell_files\gtm.js" />
+    <Content Include="Content\Sell_files\gtm_002.js" />
+    <Content Include="Content\Sell_files\hdefault.css" />
+    <Content Include="Content\Sell_files\hotjar-1081489.js" />
+    <Content Include="Content\Sell_files\icon-loading.svg" />
+    <Content Include="Content\Sell_files\introjs.css" />
+    <Content Include="Content\Sell_files\jquery-icheck.css" />
+    <Content Include="Content\Sell_files\jquery-ui-1.css" />
+    <Content Include="Content\Sell_files\jquery.css" />
+    <Content Include="Content\Sell_files\jquery.js" />
+    <Content Include="Content\Sell_files\jquery_002.css" />
+    <Content Include="Content\Sell_files\jquery_002.js" />
+    <Content Include="Content\Sell_files\jquery_003.css" />
+    <Content Include="Content\Sell_files\jquery_004.css" />
+    <Content Include="Content\Sell_files\jquery_005.css" />
+    <Content Include="Content\Sell_files\jquery_006.css" />
+    <Content Include="Content\Sell_files\jquery_007.css" />
+    <Content Include="Content\Sell_files\jquery_008.css" />
+    <Content Include="Content\Sell_files\JsBarcode.js" />
+    <Content Include="Content\Sell_files\loading.gif" />
+    <Content Include="Content\Sell_files\Logging.htm" />
+    <Content Include="Content\Sell_files\modules.js" />
+    <Content Include="Content\Sell_files\myTheme.css" />
+    <Content Include="Content\Sell_files\nprogress.css" />
+    <Content Include="Content\Sell_files\offline-db-2.js" />
+    <Content Include="Content\Sell_files\owl.css" />
+    <Content Include="Content\Sell_files\perfect-scrollbar.css" />
+    <Content Include="Content\Sell_files\pos-bundle.js" />
+    <Content Include="Content\Sell_files\pos.css" />
+    <Content Include="Content\Sell_files\print.css" />
+    <Content Include="Content\Sell_files\resetcss.css" />
+    <Content Include="Content\Sell_files\saleoff.css" />
+    <Content Include="Content\Sell_files\select.css" />
+    <Content Include="Content\Sell_files\selectize.css" />
+    <Content Include="Content\Sell_files\selectize_002.css" />
+    <Content Include="Content\Sell_files\sockjs.js" />
+    <Content Include="Content\Sell_files\viaReceiver.js" />
+    <Content Include="Content\Sell_files\webstomp.js" />
+    <Content Include="Content\Sell_files\_all.css" />
+    <Content Include="Content\Sell_files\_all_002.css" />
+    <Content Include="Content\TrangChu_files\1.jpg" />
+    <Content Include="Content\TrangChu_files\2.jpg" />
+    <Content Include="Content\TrangChu_files\3.jpg" />
+    <Content Include="Content\TrangChu_files\4.jpg" />
+    <Content Include="Content\TrangChu_files\5.jpg" />
+    <Content Include="Content\TrangChu_files\6.jpg" />
+    <Content Include="Content\TrangChu_files\7.jpg" />
+    <Content Include="Content\TrangChu_files\8.jpg" />
+    <Content Include="Content\TrangChu_files\bootstrap.css" />
+    <Content Include="Content\TrangChu_files\bootstrap.js" />
+    <Content Include="Content\TrangChu_files\c3.css" />
+    <Content Include="Content\TrangChu_files\c3.js" />
+    <Content Include="Content\TrangChu_files\chrome-logo.png" />
+    <Content Include="Content\TrangChu_files\custom.js" />
+    <Content Include="Content\TrangChu_files\d3.js" />
+    <Content Include="Content\TrangChu_files\dashboard1.css" />
+    <Content Include="Content\TrangChu_files\dashboard1.js" />
+    <Content Include="Content\TrangChu_files\default.css" />
+    <Content Include="Content\TrangChu_files\firefox-logo.png" />
+    <Content Include="Content\TrangChu_files\img1.jpg" />
+    <Content Include="Content\TrangChu_files\img2.jpg" />
+    <Content Include="Content\TrangChu_files\img3.jpg" />
+    <Content Include="Content\TrangChu_files\internet-logo.png" />
+    <Content Include="Content\TrangChu_files\jquery.css" />
+    <Content Include="Content\TrangChu_files\jQuery.js" />
+    <Content Include="Content\TrangChu_files\jquery_002.js" />
+    <Content Include="Content\TrangChu_files\logo-icon.png" />
+    <Content Include="Content\TrangChu_files\logo-light-icon.png" />
+    <Content Include="Content\TrangChu_files\logo-light-text.png" />
+    <Content Include="Content\TrangChu_files\logo-text.png" />
+    <Content Include="Content\TrangChu_files\morris.css" />
+    <Content Include="Content\TrangChu_files\morris.js" />
+    <Content Include="Content\TrangChu_files\netscape-logo.png" />
+    <Content Include="Content\TrangChu_files\opera-logo.png" />
+    <Content Include="Content\TrangChu_files\perfect-scrollbar.css" />
+    <Content Include="Content\TrangChu_files\perfect-scrollbar.js" />
+    <Content Include="Content\TrangChu_files\popper.js" />
+    <Content Include="Content\TrangChu_files\raphael.js" />
+    <Content Include="Content\TrangChu_files\safari-logo.png" />
+    <Content Include="Content\TrangChu_files\sidebarmenu.js" />
+    <Content Include="Content\TrangChu_files\style.css" />
+    <Content Include="Content\TrangChu_files\waves.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1075,6 +1227,7 @@
     <Content Include="img\iphonex.png" />
     <Content Include="img\larrow.png" />
     <Content Include="img\line.png" />
+    <Content Include="img\login-register.jpg" />
     <Content Include="img\login_1.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\logologin.jpg" />
@@ -1319,6 +1472,7 @@
     <Content Include="img\demo\Thumbs.db" />
     <Content Include="img\icons\32\Thumbs.db" />
     <Content Include="img\Thumbs.db" />
+    <Content Include="Content\Sell_files\a" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\core\bootstrap-material-design.min.js" />
     <Content Include="Scripts\core\jquery.min.js" />
@@ -1354,6 +1508,13 @@
     <Content Include="Scripts\plugins\nouislider.min.js" />
     <Content Include="Scripts\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Scripts\plugins\sweetalert2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -1383,13 +1544,21 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Layout\_LayoutAdmin.cshtml" />
     <Content Include="Scripts\material-dashboard.js.map" />
-    <Content Include="Views\SanPham\Create.cshtml" />
     <Content Include="Views\Layout\_LayoutUser.cshtml" />
     <Content Include="Views\TrangChuUser\Index.cshtml" />
+    <Content Include="Views\SanPhams\Create.cshtml" />
+    <Content Include="Views\SanPhams\Delete.cshtml" />
+    <Content Include="Views\SanPhams\Details.cshtml" />
+    <Content Include="Views\SanPhams\Edit.cshtml" />
+    <Content Include="Views\SanPhams\Index.cshtml" />
+    <Content Include="Views\Admin\TrangChu.cshtml" />
+    <Content Include="Views\BanHang\BanHang.cshtml" />
+    <Content Include="Views\BanHang\index.cshtml" />
+    <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Default\" />
+    <Folder Include="Views\TrangChuAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1408,11 +1577,11 @@
     <EmbeddedResource Include="Migrations\201904280722140_InititalModel.resx">
       <DependentUpon>201904280722140_InititalModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904280731163_CreateTableSanPham.resx">
-      <DependentUpon>201904280731163_CreateTableSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905011523407_1.resx">
+      <DependentUpon>201905011523407_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904280732354_PopulateLoaiSPTable.resx">
-      <DependentUpon>201904280732354_PopulateLoaiSPTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905011624376_11111.resx">
+      <DependentUpon>201905011624376_11111.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
