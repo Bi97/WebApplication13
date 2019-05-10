@@ -4,16 +4,6 @@
     Layout = "~/Views/Layout/_LayoutDangNhapAdmin.cshtml";
 
 }
-
-
-<div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-    <div class="auth-box bg-dark border-top border-secondary">
-        <!-- Form -->
-        <div class="text-center p-t-20 p-b-20 mb-4">
-            <span class="db mb-5"><img src="~/Admin/assets/images/logo.png" alt="logo" /></span>
-        </div>
-        <div class="row p-b-30">
-            <div class="col-12">
                 <div class="text-success">
                     <p>
                         @ViewBag.Message
@@ -23,7 +13,7 @@
                 {
                     @Html.AntiForgeryToken()
                     <div style="color:wheat">
-                        <h4>Đăng Ký Tài Khoản Mới</h4>
+                        <h4 style="font-size:25px">Đăng Ký Tài Khoản Mới</h4>
                         <hr />
                         @Html.ValidationSummary("", new { @class = "text-danger" })
                         <div class="form-group">

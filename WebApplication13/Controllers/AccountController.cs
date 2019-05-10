@@ -397,7 +397,7 @@ namespace WebApplication13.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index","SanPhams");
+            return RedirectToAction("Login","Account");
         }
 
         //

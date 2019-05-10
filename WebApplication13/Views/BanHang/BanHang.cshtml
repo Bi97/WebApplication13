@@ -148,28 +148,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach (var item in Model)
-                                            {
-                                                <tr>
-                                                    <td>  
-                                                        @Html.DisplayFor(modelItem => item.SanPhamId)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.TenSP)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.SoLuong)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.LoaiSP.TenLoai)
-                                                    </td>
-                                                </tr>
-                                            }
-                                                <tr>
-                                                    <td colspan="3" class="font-500" align="right">Total Amount</td>
-                                                    <td class="font-500"></td>
-                                                </tr>
-                                            
+                                          
                                         </tbody>
                                     </table>
                                 </div>

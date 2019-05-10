@@ -145,88 +145,48 @@
                             <!-- ============================================================== -->
                             <!-- Messages -->
                             <!-- ============================================================== -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="font-24 mdi mdi-comment-processing"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown" aria-labelledby="2">
-                                    <ul class="list-style-none">
-                                        <li>
-                                            <div class="">
-                                                <!-- Message -->
-                                                <a href="javascript:void(0)" class="link border-top">
-                                                    <div class="d-flex no-block align-items-center p-10">
-                                                        <span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Event today</h5>
-                                                            <span class="mail-desc">Just a reminder that event</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <!-- Message -->
-                                                <a href="javascript:void(0)" class="link border-top">
-                                                    <div class="d-flex no-block align-items-center p-10">
-                                                        <span class="btn btn-info btn-circle"><i class="ti-settings"></i></span>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Settings</h5>
-                                                            <span class="mail-desc">You can customize this template</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <!-- Message -->
-                                                <a href="javascript:void(0)" class="link border-top">
-                                                    <div class="d-flex no-block align-items-center p-10">
-                                                        <span class="btn btn-primary btn-circle"><i class="ti-user"></i></span>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Pavan kumar</h5>
-                                                            <span class="mail-desc">Just see the my admin!</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <!-- Message -->
-                                                <a href="javascript:void(0)" class="link border-top">
-                                                    <div class="d-flex no-block align-items-center p-10">
-                                                        <span class="btn btn-danger btn-circle"><i class="fa fa-link"></i></span>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Luanch Admin</h5>
-                                                            <span class="mail-desc">Just see the my new admin!</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                           
                             <!-- ============================================================== -->
                             <!-- End Messages -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- User profile and search -->
                             <!-- ============================================================== -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    
-                                    <span class="ml-2 font-medium">Steve</span><span class="fas fa-angle-down ml-2"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                                    <div class="d-flex no-block align-items-center p-3 mb-2 border-bottom">
-                                        <div class=""><img src="Ample%20admin%20Template%20-%20The%20Ultimate%20Multipurpose%20admin%20template_files/1.jpg" alt="" class="rounded" width="80"></div>
-                                        <div class="ml-2">
-                                            <h4 class="mb-0">Steave Jobs</h4>
-                                            <p class=" mb-0 text-muted">varun@gmail.com</p>
-                                            <a href="javascript:void(0)" class="btn btn-sm btn-danger text-white mt-2 btn-rounded">View Profile</a>
+                            @using Microsoft.AspNet.Identity
+                            @if (Request.IsAuthenticated)
+                            {
+                                using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                            <span class="ml-2 font-medium"> @Html.Name("Hello " + User.Identity.GetUserName() + "!") </span><span class="fas fa-angle-down ml-2"></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                            <div class="d-flex no-block align-items-center p-3 mb-2 border-bottom">
+                                                <div class=""><img src="Ample%20admin%20Template%20-%20The%20Ultimate%20Multipurpose%20admin%20template_files/1.jpg" alt="" class="rounded" width="80"></div>
+                                                <div class="ml-2">
+                                                    <h4 class="mb-0">Steave Jobs</h4>
+                                                    <p class=" mb-0 text-muted">varun@gmail.com</p>
+                                                    <a href="javascript:void(0)" class="btn btn-sm btn-danger text-white mt-2 btn-rounded">View Profile</a>
+                                                </div>
+                                            </div>
+                                            <a class="dropdown-item" href="  @Url.Action("Index", "Manage", routeValues: null)"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
+                                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet mr-1 ml-1"></i> My Balance</a>
+                                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email mr-1 ml-1"></i> Inbox</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings mr-1 ml-1"></i> Account Setting</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-power-off mr-1 ml-1"></i> Logout</a>
                                         </div>
-                                    </div>
-                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
-                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet mr-1 ml-1"></i> My Balance</a>
-                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email mr-1 ml-1"></i> Inbox</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings mr-1 ml-1"></i> Account Setting</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off mr-1 ml-1"></i> Logout</a>
-                                </div>
-                            </li>
+                                    </li>
+                                }
+                            }
+                            else
+                            {
+                            }
+                           
                             <!-- ============================================================== -->
                             <!-- User profile and search -->
                             <!-- ============================================================== -->
@@ -252,10 +212,31 @@
                                 <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản Lý Sản Phẩm </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
                                     <li class="sidebar-item"><a href="@Url.Action("Create","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Sản Phẩm </span></a></li>
-                                    <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Xem Danh Sách Sản Phẩm </span></a></li>
+                                    <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Sản Phẩm </span></a></li>
                                 </ul>
                             </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản Lý Loại Sản Phẩm </span></a>
+                                <ul aria-expanded="false" class="collapse  first-level">
+                                    <li class="sidebar-item"><a href="@Url.Action("Create","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Loại Sản Phẩm </span></a></li>
+                                    <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Loại Sản Phẩm </span></a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản Lý Nhà Cung Cấp</span></a>
+                                <ul aria-expanded="false" class="collapse  first-level">
+                                    <li class="sidebar-item"><a href="@Url.Action("Create","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Nhà Cung Cấp </span></a></li>
+                                    <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Nhà Cung Cấp </span></a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Quản Lý Đơn Hàng </span></a>
+                                <ul aria-expanded="false" class="collapse  first-level">
+                                    <li class="sidebar-item"><a href="icon-material.html" class="sidebar-link"><i class="mdi mdi-emoticon"></i><span class="hide-menu"> Xem Theo Cửa Hàng </span></a></li>
+                                    <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><i class="mdi mdi-emoticon-cool"></i><span class="hide-menu"> Xem Toàn Hệ Thống </span></a></li>
 
+                                </ul>
+                            </li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-buttons.html" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">Quản Lý Khách Hàng</span></a></li>
                             <li class="sidebar-item">
                                 <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Quản Lý Nhân Viên </span></a>
@@ -300,8 +281,8 @@
                             <li class="sidebar-item">
                                 <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">Quản Lý Tài Khoản </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a></li>
-                                    <li class="sidebar-item"><a href="authentication-register.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register </span></a></li>
+                                    <li class="sidebar-item"><a href="@Url.Action("Login","Account")" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a></li>
+                                    <li class="sidebar-item"><a href="@Url.Action("register","Account")" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register </span></a></li>
                                 </ul>
                             </li>
                             <!--Tài Khoản-->
