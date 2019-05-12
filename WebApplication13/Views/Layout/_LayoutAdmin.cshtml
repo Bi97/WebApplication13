@@ -1,4 +1,5 @@
-﻿
+﻿@using WebApplication13.Models
+
 <!DOCTYPE html>
 
 <html>
@@ -145,7 +146,6 @@
                             <!-- ============================================================== -->
                             <!-- Messages -->
                             <!-- ============================================================== -->
-                           
                             <!-- ============================================================== -->
                             <!-- End Messages -->
                             <!-- ============================================================== -->
@@ -159,24 +159,24 @@
                                 {
                                     @Html.AntiForgeryToken()
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle waves-effect waves-dark ; mt-3" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                                            <span class="ml-2 font-medium"> @Html.Name("Hello " + User.Identity.GetUserName() + "!") </span><span class="fas fa-angle-down ml-2"></span>
+                                            <span class="ml-2 font-medium">  @Html.Name("Hello " + User.LastName() + "!") </span><span class="fas fa-angle-down ml-2"></span>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                                             <div class="d-flex no-block align-items-center p-3 mb-2 border-bottom">
                                                 <div class=""><img src="Ample%20admin%20Template%20-%20The%20Ultimate%20Multipurpose%20admin%20template_files/1.jpg" alt="" class="rounded" width="80"></div>
                                                 <div class="ml-2">
-                                                    <h4 class="mb-0">Steave Jobs</h4>
-                                                    <p class=" mb-0 text-muted">varun@gmail.com</p>
+                                                    <h4 class="mb-0"> @Html.Name(User.FirstName()) @Html.Name(User.LastName())</h4>
+                                                    <p class=" mb-0 text-muted">@Html.Name(User.Identity.GetUserName() + "!")</p>
                                                     <a href="javascript:void(0)" class="btn btn-sm btn-danger text-white mt-2 btn-rounded">View Profile</a>
                                                 </div>
                                             </div>
-                                            <a class="dropdown-item" href="  @Url.Action("Index", "Manage", routeValues: null)"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
+                                            <a class="dropdown-item" href=" #"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
                                             <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet mr-1 ml-1"></i> My Balance</a>
                                             <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email mr-1 ml-1"></i> Inbox</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings mr-1 ml-1"></i> Account Setting</a>
+                                            <a class="dropdown-item" href="@Url.Action("Index", "Manage", routeValues: null)"><i class="ti-settings mr-1 ml-1"></i> Account Setting</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-power-off mr-1 ml-1"></i> Logout</a>
                                         </div>
@@ -186,7 +186,7 @@
                             else
                             {
                             }
-                           
+
                             <!-- ============================================================== -->
                             <!-- User profile and search -->
                             <!-- ============================================================== -->
