@@ -1566,10 +1566,10 @@
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
     <Content Include="Views\BanHang\BanHang.cshtml" />
-    <Content Include="Views\BanHang\index.cshtml" />
     <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
     <Content Include="Views\Admin\TrangChu.cshtml" />
     <Content Include="Web.config" />
+    <Content Include="Views\BanHang\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
