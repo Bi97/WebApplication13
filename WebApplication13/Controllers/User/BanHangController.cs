@@ -21,12 +21,7 @@ namespace WebApplication13.Controllers
             ApplicationDbContext entities = new ApplicationDbContext();
             var customers = (from SP in entities.SanPhams
                              where SP.TenSP.StartsWith(prefix)
-                             select new
-                             {
-                                 label = SP.TenSP,
-                                 val = SP.SanPhamId,
-
-                             }).ToList();
+                             select SP );
 
             return Json(customers);
         }
