@@ -16,16 +16,17 @@ namespace WebApplication13.Controllers
             return View();
         }
         [HttpPost]
-        public JsonResult AutoComplete(string prefix)
+        public JsonResult ChonSP(string prefix)
         {
-            ApplicationDbContext entities = new ApplicationDbContext();
-            var customers = (from SP in entities.SanPhams
+            ApplicationDbContext db = new ApplicationDbContext();
+            var customers = (from SP in db.SanPhams
                              where SP.TenSP.StartsWith(prefix)
                              select new
                              {
                                  label = SP.TenSP,
-                                 value= SP.TenSP ,
-                                 text = SP.DonGia,
+                                 value= SP.SanPhamId,  
+                                 DonGia = SP.DonGia,
+
                              });
 
             return Json(customers);

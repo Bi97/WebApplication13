@@ -148,6 +148,26 @@ namespace WebApplication13.Controllers.User
            
 
         }
+        //======================================================================//
+        //======================================================================//
+        [HttpGet]
+        public ActionResult MuaHang()
+        {
+            if(Session["GioHang"] == null)
+            {
+                return RedirectToAction("DS", "BanHang2");
+            }
+            List<GioHang> ListGioHang = LayGioHang();
+            ViewBag.TongSoLuong = TongSoLuong();
+            ViewBag.TongTien = TongTien();
+            return View(ListGioHang);
+        }
+
+
+
+
+
+
 
 
 
@@ -164,6 +184,8 @@ namespace WebApplication13.Controllers.User
         //======================================================================//
 
 
+
+        
     }
 
 
