@@ -17,7 +17,7 @@ namespace WebApplication13.Models
             get { return gSoLuong * gDonGia; }
         }
 
-        public GioHang (int SanPhamId)
+        public GioHang(int SanPhamId)
         {
             gSanPhamId = SanPhamId;
             SanPham SP = db.SanPhams.Single(n => n.SanPhamId == gSanPhamId);
