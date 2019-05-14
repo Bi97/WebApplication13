@@ -992,6 +992,44 @@
     <Content Include="Content\AdminLogin\css.css" />
     <Content Include="Content\AdminLogin\font-awesome.css" />
     <Content Include="Content\AdminLogin\matrix-login.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\1.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\2.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\3.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\4.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\5.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\6.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\7.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\8.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert2.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert3.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert4.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert5.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert6.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert7.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\bootstrap.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\bootstrap.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\custom.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\default.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\img1.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\img2.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\img3.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\jQuery.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\jquery_002.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-icon.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-light-icon.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-light-text.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-text.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\model.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\perfect-scrollbar.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\popper.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sidebarmenu.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sticky-kit.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\style.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sweet-alert.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sweetalert2.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sweetalert2.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\waves.js" />
     <Content Include="Content\Admin\bootstrap-responsive.min.css" />
     <Content Include="Content\Admin\bootstrap-wysihtml5.css" />
     <Content Include="Content\Admin\bootstrap.min.css" />
@@ -1602,7 +1640,6 @@
     <Content Include="Views\Layout\_LayoutAdmin.cshtml" />
     <Content Include="Scripts\material-dashboard.js.map" />
     <Content Include="Views\Layout\_LayoutUser.cshtml" />
-    <Content Include="Views\TrangChuUser\Index.cshtml" />
     <Content Include="Views\SanPhams\Create.cshtml" />
     <Content Include="Views\SanPhams\Delete.cshtml" />
     <Content Include="Views\SanPhams\Details.cshtml" />
@@ -1615,6 +1652,8 @@
     <Content Include="Views\BanHang\Index.cshtml" />
     <Content Include="Views\BanHang2\GioHang.cshtml" />
     <Content Include="Views\BanHang2\DS.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\alert.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1624,7 +1663,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\TrangChuAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

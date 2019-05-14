@@ -41,7 +41,9 @@ namespace WebApplication13.Controllers.User
             {
                 sanpham = new GioHang(gSanPhamId);
                 listGioHang.Add(sanpham);
+                ViewData["success"] = "Them Thanh Cong";
                 return Redirect(strURL);
+                
             }
             else
             {
@@ -94,7 +96,9 @@ namespace WebApplication13.Controllers.User
             List<GioHang> listGioHang = LayGioHang();
             if(listGioHang.Count ==0)
             {
-                return RedirectToAction("TrangChu", "Admin");
+                ViewBag.message = "";
+                return RedirectToAction("DS", "BanHang2");
+                
             }
             ViewBag.TongSoLuong = TongSoLuong();
             ViewBag.TongTien = TongTien();

@@ -13,5 +13,9 @@ namespace WebApplication13.Controllers.User
         {
             return View();
         }
+        public ActionResult alert()
+        {
+            return View();
+        }
     }
 }
