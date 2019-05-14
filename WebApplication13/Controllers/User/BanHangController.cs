@@ -21,7 +21,12 @@ namespace WebApplication13.Controllers
             ApplicationDbContext entities = new ApplicationDbContext();
             var customers = (from SP in entities.SanPhams
                              where SP.TenSP.StartsWith(prefix)
-                             select SP );
+                             select new
+                             {
+                                 label = SP.TenSP,
+                                 value= SP.TenSP ,
+                                 text = SP.DonGia,
+                             });
 
             return Json(customers);
         }

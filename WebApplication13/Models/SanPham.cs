@@ -15,6 +15,7 @@ namespace WebApplication13.Models
         public double SoLuong { get; set; }
         public string MoTa { get; set; }
 
+        public double DonGia { get; set; }
         public NhaCungCap NhaCungCap { get; set; }
         public int NhaCungCapId { get; set; }
 

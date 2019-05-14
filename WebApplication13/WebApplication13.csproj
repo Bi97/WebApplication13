@@ -182,6 +182,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\User\BanHang2Controller.cs" />
     <Compile Include="Controllers\User\BanHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -209,6 +210,10 @@
     <Compile Include="Migrations\201905101456211_123112213.cs" />
     <Compile Include="Migrations\201905101456211_123112213.Designer.cs">
       <DependentUpon>201905101456211_123112213.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905121339227_2112.cs" />
+    <Compile Include="Migrations\201905121339227_2112.Designer.cs">
+      <DependentUpon>201905121339227_2112.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1045,6 +1050,43 @@
     <Content Include="Content\DangNhap_files\logo-text.png" />
     <Content Include="Content\DangNhap_files\popper.js" />
     <Content Include="Content\DangNhap_files\style.css" />
+    <Content Include="Content\datatb_files\1.jpg" />
+    <Content Include="Content\datatb_files\2.jpg" />
+    <Content Include="Content\datatb_files\3.jpg" />
+    <Content Include="Content\datatb_files\4.jpg" />
+    <Content Include="Content\datatb_files\5.jpg" />
+    <Content Include="Content\datatb_files\6.jpg" />
+    <Content Include="Content\datatb_files\7.jpg" />
+    <Content Include="Content\datatb_files\8.jpg" />
+    <Content Include="Content\datatb_files\bootstrap.css" />
+    <Content Include="Content\datatb_files\bootstrap.js" />
+    <Content Include="Content\datatb_files\buttons.js" />
+    <Content Include="Content\datatb_files\buttons_002.js" />
+    <Content Include="Content\datatb_files\buttons_003.js" />
+    <Content Include="Content\datatb_files\custom.js" />
+    <Content Include="Content\datatb_files\dataTables.css" />
+    <Content Include="Content\datatb_files\dataTables.js" />
+    <Content Include="Content\datatb_files\default.css" />
+    <Content Include="Content\datatb_files\img1.jpg" />
+    <Content Include="Content\datatb_files\img2.jpg" />
+    <Content Include="Content\datatb_files\img3.jpg" />
+    <Content Include="Content\datatb_files\jquery.js" />
+    <Content Include="Content\datatb_files\jquery_002.js" />
+    <Content Include="Content\datatb_files\jquery_003.js" />
+    <Content Include="Content\datatb_files\jszip.js" />
+    <Content Include="Content\datatb_files\logo-icon.png" />
+    <Content Include="Content\datatb_files\logo-light-icon.png" />
+    <Content Include="Content\datatb_files\logo-light-text.png" />
+    <Content Include="Content\datatb_files\logo-text.png" />
+    <Content Include="Content\datatb_files\pdfmake.js" />
+    <Content Include="Content\datatb_files\perfect-scrollbar.js" />
+    <Content Include="Content\datatb_files\popper.js" />
+    <Content Include="Content\datatb_files\sidebarmenu.js" />
+    <Content Include="Content\datatb_files\sticky-kit.js" />
+    <Content Include="Content\datatb_files\style.css" />
+    <Content Include="Content\datatb_files\table-pages.css" />
+    <Content Include="Content\datatb_files\vfs_fonts.js" />
+    <Content Include="Content\datatb_files\waves.js" />
     <Content Include="Content\floating-label.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\material-dashboard-rtl.css" />
@@ -1571,6 +1613,8 @@
     <Content Include="Views\Admin\TrangChu.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Views\BanHang\Index.cshtml" />
+    <Content Include="Views\BanHang2\GioHang.cshtml" />
+    <Content Include="Views\BanHang2\DS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1610,6 +1654,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905101456211_123112213.resx">
       <DependentUpon>201905101456211_123112213.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905121339227_2112.resx">
+      <DependentUpon>201905121339227_2112.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
