@@ -223,9 +223,14 @@
     <Compile Include="Migrations\201905140816419_7.Designer.cs">
       <DependentUpon>201905140816419_7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905140840219_addDonGia+Ten.cs" />
+    <Compile Include="Migrations\201905140840219_addDonGia+Ten.Designer.cs">
+      <DependentUpon>201905140840219_addDonGia+Ten.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\DonHang.cs" />
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KhachHang.cs" />
@@ -1710,6 +1715,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905140816419_7.resx">
       <DependentUpon>201905140816419_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905140840219_addDonGia+Ten.resx">
+      <DependentUpon>201905140840219_addDonGia+Ten.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

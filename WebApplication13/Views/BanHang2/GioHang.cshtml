@@ -97,9 +97,10 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div style="width:100%;">
-                                 
+                                <div style="width:100%;">                                
                                     <div class="table-responsive ">
+                                        <hr class="border-cyan" />
+                                        <h5 class="card-title; text-center" style="font-size:30px; color:red">Thanh Toán</h5>
                                         <hr class="border-cyan" />
                                         <table id="log" class="table color-bordered-table red-bordered-table ">
                                             <thead style="color:red;" class="mt-1">
@@ -107,7 +108,7 @@
                                                     <th>Tên Sản Phẩm</th>
                                                     <th>Mô Tả</th>
                                                     <th>Số Lượng</th>
-                                                    
+
                                                     <th>Đơn Giá</th>
                                                     <th>Tổng Tiền</th>
                                                     <th></th>
@@ -117,41 +118,41 @@
                                             <tbody>
                                                 @foreach (var item in Model)
                                                 {
-                                                <tr>
-                                                    <td>
-                                                        @item.gTenSP
-                                                    </td>
-                                                    <td class="col-md-2">
-
-                                                        @item.gSanPhamId
-                                                    </td>
-                                                    @using (Html.BeginForm("CapNhatGioHang", "BanHang2", new { @gSanPhamId = item.gSanPhamId }))
-                                                    {
-
-
+                                                    <tr>
+                                                        <td>
+                                                            @item.gTenSP
+                                                        </td>
                                                         <td class="col-md-2">
-                                                            <input type="number" min="1" class="form-control col-md-4" name="txtSoLuong" value="@item.gSoLuong"/>
+
+                                                            @item.gSanPhamId
                                                         </td>
-                                                        <td>
-                                                            @String.Format("{0:0,0}", item.gDonGia)
-                                                        </td>
-                                                        <td>
-                                                            @String.Format("{0:0,0}", item.gThanhTien)
-                                                        </td>
-                                                        <td>
-                                                            <a class="btn btn-outline-danger" href="@Url.Action("XoaGioHang","BanHang2", new { @gSanPhamId = item.gSanPhamId})">Xoa</a>
-                                                        </td>
-                                                        <td>
-                                                            <input class="btn btn-outline-danger" type="submit" value="Cap Nhat" />
-                                                        </td>
-                                                    }
-                                                </tr>
-                                                }
-                                                
-                                                    <tr style="font-weight:bold;color:brown;">
-                                                        <td colspan="4" class="font-500" align="right">Total Amount :</td>
-                                                        <td class="font-500">@String.Format("{0:0,0}", ViewBag.TongTien)</td>
+                                                        @using (Html.BeginForm("CapNhatGioHang", "BanHang2", new { @gSanPhamId = item.gSanPhamId }))
+                                                        {
+
+
+                                                            <td class="col-md-2">
+                                                                <input type="number" min="1" class="form-control col-md-4" name="txtSoLuong" value="@item.gSoLuong" />
+                                                            </td>
+                                                            <td>
+                                                                @String.Format("{0:0,0}", item.gDonGia)
+                                                            </td>
+                                                            <td>
+                                                                @String.Format("{0:0,0}", item.gThanhTien)
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-outline-danger" href="@Url.Action("XoaGioHang","BanHang2", new { @gSanPhamId = item.gSanPhamId})">Xoa</a>
+                                                            </td>
+                                                            <td>
+                                                                <input class="btn btn-outline-danger" type="submit" value="Cap Nhat" />
+                                                            </td>
+                                                        }
                                                     </tr>
+                                                }
+
+                                                <tr style="font-weight:bold;color:brown;">
+                                                    <td colspan="4" class="font-500" align="right">Total Amount :</td>
+                                                    <td class="font-500">@String.Format("{0:0,0}", ViewBag.TongTien)</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                         <div style="font-weight:bold;color:brown;text-align:right">
