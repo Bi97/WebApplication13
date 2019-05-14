@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -12,6 +14,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 using WebApplication13.Models;
 
 namespace WebApplication13
@@ -28,6 +33,7 @@ namespace WebApplication13
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 Credentials = new NetworkCredential("Knplong97@gmail.com", "110597Long"),
                 EnableSsl = true,
+
             };
             var from = new MailAddress("Knplong97@gmail.com", "BiMap");
             var to = new MailAddress(message.Destination);
@@ -40,6 +46,7 @@ namespace WebApplication13
             };
             client.Send(mail);
             // Plug in your email service here to send an email.
+
             return Task.FromResult(0);
         }
     }
@@ -48,8 +55,17 @@ namespace WebApplication13
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your SMS service here to send a text message.
-            return Task.FromResult(0);
+
+            var accountSid = ConfigurationManager.AppSettings["SMSAccountIdentification"];
+            var authToken = ConfigurationManager.AppSettings["SMSAccountPassword"];
+            var fromNumber = ConfigurationManager.AppSettings["SMSAccountFrom"];
+
+            TwilioClient.Init(accountSid, authToken);
+            MessageResource result = MessageResource.Create(new PhoneNumber(message.Destination),from: new PhoneNumber(fromNumber),body: message.Body);
+            Trace.TraceInformation(result.Status.ToString());
+            ////Twilio doesn't currently have an async API, so return success.
+            return Task.FromResult(0);   
+
         }
     }
 

@@ -1,0 +1,353 @@
+﻿@using WebApplication13.Models
+@model List<GioHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <link href="~/Content/address_files/bootstrap.css" rel="stylesheet">
+
+    <link href="~/Content/address_files/style.css" rel="stylesheet">
+
+    <link href="~/Content/address_files/default.css" id="theme" rel="stylesheet">
+
+    <link href="~/Content/floating-label.css" rel="stylesheet">
+    <link href="~/Content/table_files/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/jquery-minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/libs/quill/dist/quill.snow.css">
+    <link href="~/Admin/dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Admin/assets/extra-libs/multicheck/multicheck.css">
+    <link href="~/Admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="~/Admin/dist/css/style.min.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.wrappixel.com/ampleadmin/assets/images/favicon.png">
+    <title>Ample admin Template - The Ultimate Multipurpose admin template</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="~/Content/BanHang/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader" style="display: none;">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="overlay" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full" class="hide-sidebar">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper mt-0" style="display: block; padding-top:0px;">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="page-content container-fluid" style="padding-top:5px; padding-bottom:0px;">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Table -->
+                <!-- ============================================================== -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div style="width:100%;">                                
+                                    <div class="table-responsive ">
+                                        <hr class="border-cyan" />
+                                        <h5 class="card-title; text-center" style="font-size:30px; color:red">Thanh Toán</h5>
+                                        <hr class="border-cyan" />
+                                        <table id="log" class="table color-bordered-table red-bordered-table ">
+                                            <thead style="color:red;" class="mt-1">
+                                                <tr>
+                                                    <th>Tên Sản Phẩm</th>
+                                                    <th>Mô Tả</th>
+                                                    <th>Số Lượng</th>
+
+                                                    <th>Đơn Giá</th>
+                                                    <th>Tổng Tiền</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @item.gTenSP
+                                                        </td>
+                                                        <td class="col-md-2">
+
+                                                            @item.gSanPhamId
+                                                        </td>
+                                                        @using (Html.BeginForm("CapNhatGioHang", "BanHang2", new { @gSanPhamId = item.gSanPhamId }))
+                                                        {
+
+
+                                                            <td class="col-md-2">
+                                                                <input type="number" min="1" class="form-control col-md-4" name="txtSoLuong" value="@item.gSoLuong" />
+                                                            </td>
+                                                            <td>
+                                                                @String.Format("{0:0,0}", item.gDonGia)
+                                                            </td>
+                                                            <td>
+                                                                @String.Format("{0:0,0}", item.gThanhTien)
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-outline-danger" href="@Url.Action("XoaGioHang","BanHang2", new { @gSanPhamId = item.gSanPhamId})">Xoa</a>
+                                                            </td>
+                                                            <td>
+                                                                <input class="btn btn-outline-danger" type="submit" value="Cap Nhat" />
+                                                            </td>
+                                                        }
+                                                    </tr>
+                                                }
+
+                                                <tr style="font-weight:bold;color:brown;">
+                                                    <td colspan="4" class="font-500" align="right">Total Amount :</td>
+                                                    <td class="font-500">@String.Format("{0:0,0}", ViewBag.TongTien)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="font-weight:bold;color:brown;text-align:right">
+                                            @ViewBag.TongSoLuong
+                                        </div>
+                                    </div>
+                                   
+                                    <h5 class="card-title "></h5>
+                                    <hr />
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="nav-item" style="color:aqua">
+                                            <a href="#iprofile" style="color:blue" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" aria-selected="true">
+                                                <span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Thanh Toán</span>
+                                            </a>
+                                        </li>
+                                        <!--
+           <li role="presentation" class="nav-item">
+             <a href="#ihome" style="color:blue" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false" aria-selected="false">
+                 <span class="visible-xs"><i class="ti-user"></i></span>
+                 <span class="hidden-xs">Thông Tin Khách Hàng</span>
+             </a>
+         </li>
+        -->
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane" id="ihome">
+                                            <hr>
+                                            <div class="card">
+                                                <div class="row">
+                                                    <div class="col-md-12 ">
+                                                        <div class="form-group has-success">
+                                                            <label>Street</label>
+                                                            <input type="text" class="form-control form-control-danger">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 ">
+                                                        <div class="form-group has-success">
+                                                            <label>City</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-success">
+                                                            <label>State</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                </div>
+                                                <!--/row-->
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-success">
+                                                            <label>Post Code</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-success">
+                                                            <label>Country</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                </div>
+                                                <hr />
+                                            </div>
+
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane active" id="iprofile">
+                                            <hr />
+                                            <div class="card">
+
+                                                <div class="row">
+                                                    <div class="col-md-6 ">
+                                                        <div class="form-group has-success">
+                                                            <label>City</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-success">
+                                                            <label>State</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                </div>
+                                                <!--/row-->
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-success">
+                                                            <label>Post Code</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-success">
+                                                            <label>Country</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!--/span-->
+                                                </div>
+                                                <hr />
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div>
+                                                <a class="btn btn-info btn-lg " href="@Url.Action("DS", "BanHang2")">Trở Lại</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End PAge Content -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Right sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- .right-sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- End Right sidebar -->
+                    <!-- ============================================================== -->
+                </div>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Page wrapper  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Wrapper -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- customizer Panel -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+        <script src="~/Content/BanHang/jquery.js"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="~/Content/BanHang/popper.js"></script>
+        <script src="~/Content/BanHang/bootstrap.js"></script>
+        <!-- apps -->
+        <script src="~/Content/BanHang/app.js"></script>
+        <script src="~/Content/BanHang/app_002.js"></script>
+        <script src="~/Content/BanHang/app-style-switcher.js"></script>
+        <!-- slimscrollbar scrollbar JavaScript -->
+        <script src="~/Content/BanHang/perfect-scrollbar.js"></script>
+        <script src="~/Content/BanHang/sparkline.js"></script>
+        <!--Wave Effects -->
+        <script src="~/Content/BanHang/waves.js"></script>
+        <!--Menu sidebar -->
+        <script src="~/Content/BanHang/sidebarmenu.js"></script>
+        <!--Mask-->
+        <script src="~/Scripts/mask.js"></script>
+        <!--Custom JavaScript -->
+        <script src="~/Content/BanHang/custom.js"></script>
+        <script src="~/Admin/assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+        <script src="~/Admin/dist/js/pages/mask/mask.init.js"></script>
+        <script src="~/Admin/assets/libs/select2/dist/js/select2.full.min.js"></script>
+        <script src="~/Admin/assets/libs/select2/dist/js/select2.min.js"></script>
+        <script src="~/Admin/assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+        <script src="~/Admin/assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+        <script src="~/Admin/assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+        <script src="~/Admin/assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+        <script src="~/Admin/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/Admin/assets/libs/quill/dist/quill.min.js"></script>
+        <script src="~/Scripts/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/Admin/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+        <script src="~/Admin/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+        <script src="~/Admin/assets/extra-libs/DataTables/datatables.min.js"></script>
+
+
+
+       
+
+
+        <!-- AUTOCOMPLETE -->
+        <!-- ================================================================================== -->
+        <!-- ================================================================================== -->
+
+</body>
+</html>

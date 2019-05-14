@@ -11,22 +11,30 @@ namespace WebApplication13.Controllers
 {
     public class BanHangController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-        // GET: BanHang
         public ActionResult BanHang()
-        { 
+        {
             return View();
         }
-        /* public ActionResult index()
-         {
-             return View();
-         }*/
-
-        //tìm kiếm
-
-        public ActionResult Index()
+        [HttpPost]
+        public JsonResult AutoComplete(string prefix)
         {
-           
+            ApplicationDbContext entities = new ApplicationDbContext();
+            var customers = (from SP in entities.SanPhams
+                             where SP.TenSP.StartsWith(prefix)
+                             select new
+                             {
+                                 label = SP.TenSP,
+                                 value= SP.TenSP ,
+                                 text = SP.DonGia,
+                             });
+
+            return Json(customers);
+        }
+
+        [HttpPost]
+        public ActionResult BanHang(string TenSP, string SanPhamId)
+        {
+            ViewBag.Message = "CustomerName: " + TenSP + " CustomerId: " + SanPhamId;
             return View();
         }
 

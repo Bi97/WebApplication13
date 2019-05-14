@@ -32,53 +32,65 @@
                 <div class="lds-pos"></div>
             </div>
         </div>
-                <div>
-                    @RenderBody()
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
+            <div class="auth-box bg-dark border-top border-secondary">
+                <!-- Form -->
+                <div class="text-center p-t-20 p-b-20 mb-4">
+                    <span class="db mb-5"><img src="~/Admin/assets/images/logo.png" alt="logo" /></span>
                 </div>
+                <div class="row p-b-30">
+                    <div class="col-12">
+                        <div>
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper scss in scafholding.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper scss in scafholding.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Right Sidebar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Right Sidebar -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- All Required js -->
-    <!-- ============================================================== -->
-    <script src="~/Admin/assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="~/Admin/assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="~/Admin/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugin js -->
-    <!-- ============================================================== -->
-    <script>
 
-        $('[data-toggle="tooltip"]').tooltip();
-        $(".preloader").fadeOut();
-        // ==============================================================
-        // Login and Recover Password
-        // ==============================================================
-        $('#to-recover').on("click", function () {
-            $("#loginform").slideUp();
-            $("#recoverform").fadeIn();
-        });
-        $('#to-login').click(function () {
+                        <!-- ============================================================== -->
+                        <!-- Login box.scss -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Page wrapper scss in scafholding.scss -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Page wrapper scss in scafholding.scss -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Right Sidebar -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Right Sidebar -->
+                        <!-- ============================================================== -->
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- All Required js -->
+                    <!-- ============================================================== -->
+                    <script src="~/Admin/assets/libs/jquery/dist/jquery.min.js"></script>
+                    <!-- Bootstrap tether Core JavaScript -->
+                    <script src="~/Admin/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+                    <script src="~/Admin/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+                    <!-- ============================================================== -->
+                    <!-- This page plugin js -->
+                    <!-- ============================================================== -->
+                    <script>
 
-            $("#recoverform").hide();
-            $("#loginform").fadeIn();
-        });
-    </script>
+                        $('[data-toggle="tooltip"]').tooltip();
+                        $(".preloader").fadeOut();
+                        // ==============================================================
+                        // Login and Recover Password
+                        // ==============================================================
+                        $('#to-recover').on("click", function () {
+                            $("#loginform").slideUp();
+                            $("#recoverform").fadeIn();
+                        });
+                        $('#to-login').click(function () {
+
+                            $("#recoverform").hide();
+                            $("#loginform").fadeIn();
+                        });
+                    </script>
 
 </body>
 </html>
