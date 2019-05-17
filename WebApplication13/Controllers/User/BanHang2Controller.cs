@@ -199,6 +199,18 @@ namespace WebApplication13.Controllers.User
             ViewBag.TongTien = TongTien();
             db.DonHangs.Add(DH);
             db.SaveChanges();
+            foreach ( var item in gh)
+            {
+                CTDonHang CTDH = new CTDonHang();
+                CTDH.DonhangId = DH.DonHangId;
+                CTDH.SanPhamId = item.gSanPhamId;
+                CTDH.SoLuong = item.gSoLuong;
+                CTDH.DonGia = item.gDonGia;
+                CTDH.GiamGia = item.gGiamGia;
+                db.CTDonHangs.Add(CTDH);
+
+            }
+            db.SaveChanges();
             Session["GioHang"] = null;
             return RedirectToAction("DS", "BanHang2");        
         }

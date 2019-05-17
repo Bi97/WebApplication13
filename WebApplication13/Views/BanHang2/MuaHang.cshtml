@@ -129,32 +129,10 @@
                             <!--=======================================================================================-->
                             <!--=======================================================================================-->
                             <!--Thẻ-->
-                            <!--=======================================================================================-->
-
-                            <h5 class="card-title "></h5>
-                            <hr />
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="nav-item" style="color:aqua">
-                                    <a href="#KhachHang" style="color:blue" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" aria-selected="true">
-                                        <span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Khách Hàng</span>
-                                    </a>
-                                </li>
-
-                                <li role="presentation" class="nav-item">
-                                    <a href="#NhanVien" style="color:blue" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false" aria-selected="false">
-                                        <span class="visible-xs"><i class="ti-user"></i></span>
-                                        <span class="hidden-xs">Nhân Viên</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane" id="NhanVien">
-                                    <hr />
-
-                                </div>
-                                <div role="tabpanel" class="tab-pane active" id="KhachHang">
-                                    <hr />
+                            <!--=======================================================================================--> 
+                            <div class="card">                 
+                                <div>
+                                    <hr class="border-cyan" />
                                     <div class="card">
                                         <div class="form-group">
                                             <div class="input-group mb-3">
@@ -192,36 +170,28 @@
                                             <div class="col-md-6">
                                                 <div class="form-group has-success">
                                                     <label>Mã Khách Hàng</label>
-                                                    <div  id="KHId" style="height: 20px; width: 200px; overflow: auto;" class="form-control"></div>                                                  
+                                                    <div id="KHId" style="height: 20px; width: 200px; overflow: auto;" class="form-control"></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group has-success">
-                                                    <label>Nhập Mã Khách Hàng</label>                                                    
-                                                    <input type="number" name="KhachHangId" class="form-control col-md-3"/>
+                                                    <label>Nhập Mã Khách Hàng</label>
+
+                                                    <input type="text" name="KhachHangId" class="form-control col-md-4" />
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <a class="btn btn-info btn-lg pull-right" href="@Url.Action("DS", "BanHang2")">Trở Lại</a>
+                                                <input type="submit" value="Xác Nhận Thanh Toán" class="btn btn-outline-primary btn-lg pull-right ml-3 mr-5" />
                                             </div>
                                             <!--/span-->
                                         </div>
+                                        
                                         <hr />
 
                                     </div>
                                 </div>
-                            </div>
-                            @using Microsoft.AspNet.Identity
-                            @if (Request.IsAuthenticated)
-                            {
-                                @Html.Name(User.TenCuaHang())
-                            }
-                            <div>
-                                <a class="btn btn-info btn-lg float-left" href="@Url.Action("DS", "BanHang2")">Trở Lại</a>
-                                <a class="btn btn-info btn-lg float-right" href="@Url.Action("MuaHang", "BanHang2")">Tiếp Tục</a>
-
-
-                                <input type="submit" value="Thêm Sản Phẩm" class="btn btn-outline-danger float-right" />
-
-
-                            </div>
+                            </div>                                                   
                         </div>
                     </div>
                 </div>

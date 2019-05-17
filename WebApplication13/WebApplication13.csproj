@@ -182,7 +182,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
-    <Compile Include="Controllers\DonHangsController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\User\BanHang2Controller.cs" />
     <Compile Include="Controllers\User\BanHangController.cs" />
@@ -245,9 +244,18 @@
     <Compile Include="Migrations\201905161552174_editdonhang.Designer.cs">
       <DependentUpon>201905161552174_editdonhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905170758069_AddCTDH.cs" />
+    <Compile Include="Migrations\201905170758069_AddCTDH.Designer.cs">
+      <DependentUpon>201905170758069_AddCTDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905170809327_editCTDH.cs" />
+    <Compile Include="Migrations\201905170809327_editCTDH.Designer.cs">
+      <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\CTDonHang.cs" />
     <Compile Include="Models\CuaHang.cs" />
     <Compile Include="Models\DonHang.cs" />
     <Compile Include="Models\GioHang.cs" />
@@ -1688,11 +1696,6 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\alert.cshtml" />
     <Content Include="Views\BanHang2\MuaHang.cshtml" />
-    <Content Include="Views\DonHangs\Create.cshtml" />
-    <Content Include="Views\DonHangs\Delete.cshtml" />
-    <Content Include="Views\DonHangs\Details.cshtml" />
-    <Content Include="Views\DonHangs\Edit.cshtml" />
-    <Content Include="Views\DonHangs\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1757,6 +1760,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905161552174_editdonhang.resx">
       <DependentUpon>201905161552174_editdonhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905170758069_AddCTDH.resx">
+      <DependentUpon>201905170758069_AddCTDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905170809327_editCTDH.resx">
+      <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
