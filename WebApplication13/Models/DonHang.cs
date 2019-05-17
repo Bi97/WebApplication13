@@ -17,9 +17,9 @@ namespace WebApplication13.Models
         [Required]
         public int KhachHangId { get; set; }
 
-        public SanPham SanPham { get; set; }
+        public CuaHang CuaHang { get; set; }
         [Required]
-        public int SanPhamId { get; set; }
+        public int CuaHangId { get; set; }
 
     }
 }

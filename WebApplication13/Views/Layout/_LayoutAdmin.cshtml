@@ -169,7 +169,7 @@
                                                 <div class="ml-2">
                                                     <h4 class="mb-0"> @Html.Name(User.FirstName()) @Html.Name(User.LastName())</h4>
                                                     <p class=" mb-0 text-muted">@Html.Name(User.Identity.GetUserName() + "!")</p>
-                                                    <a href="javascript:void(0)" class="btn btn-sm btn-danger text-white mt-2 btn-rounded">View Profile</a>
+                                                    <a href="javascript:void(0)" class="btn btn-sm btn-danger text-white mt-2 btn-rounded">@Html.Name(User.TenCuaHang())</a>
                                                 </div>
                                             </div>
                                             <a class="dropdown-item" href=" #"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
@@ -213,20 +213,21 @@
                                 <ul aria-expanded="false" class="collapse  first-level">
                                     <li class="sidebar-item"><a href="@Url.Action("Create","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Sản Phẩm </span></a></li>
                                     <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Sản Phẩm </span></a></li>
+                                    <li class="sidebar-item"><a href="@Url.Action("DS","BanHang2")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Bans Hang </span></a></li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
                                 <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản Lý Loại Sản Phẩm </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="@Url.Action("Create","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Loại Sản Phẩm </span></a></li>
-                                    <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Loại Sản Phẩm </span></a></li>
+                                    <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Loại Sản Phẩm </span></a></li>
+                                    <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Loại Sản Phẩm </span></a></li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
                                 <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản Lý Nhà Cung Cấp</span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="@Url.Action("Create","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Nhà Cung Cấp </span></a></li>
-                                    <li class="sidebar-item"><a href="@Url.Action("Index","SanPhams")" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Nhà Cung Cấp </span></a></li>
+                                    <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm Nhà Cung Cấp </span></a></li>
+                                    <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh Sách Nhà Cung Cấp </span></a></li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
@@ -300,7 +301,7 @@
             <!-- Page wrapper  -->
             <!-- ============================================================== -->
             <div class="page-wrapper">
-                <div class="container-fluid " style="background-color:ActiveBorder">
+                <div class="container-fluid " style="background-color:ghostwhite">
                     <div>
                         @RenderBody()
                     </div>

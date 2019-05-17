@@ -14,9 +14,9 @@ namespace WebApplication13.Models
 
         public CuaHang CuaHang { get; set; }
         [Required]
-        public int CuaHangId { get; set; }
-
+        public int CuaHangId { get; set; }     
         [Required]
+       
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
@@ -27,7 +27,7 @@ namespace WebApplication13.Models
             // Add custom user claims here
             userIdentity.AddClaim(new Claim("LastName", this.LastName));
             userIdentity.AddClaim(new Claim("FirstName", this.FirstName));
-            
+            userIdentity.AddClaim(new Claim("TenCuaHang", this.CuaHangId.ToString()));           
             return userIdentity;
            
         }      
@@ -57,6 +57,21 @@ namespace WebApplication13.Models
                 foreach (var claim in claimsIdentity.Claims)
                 {
                     if (claim.Type == "FirstName")
+                        return claim.Value;
+                }
+                return "";
+            }
+            else
+                return "";
+        }
+        public static string TenCuaHang(this IPrincipal user)
+        {
+            if (user.Identity.IsAuthenticated)
+            {
+                ClaimsIdentity claimsIdentity = user.Identity as ClaimsIdentity;
+                foreach (var claim in claimsIdentity.Claims)
+                {
+                    if (claim.Type == "TenCuaHang")
                         return claim.Value;
                 }
                 return "";

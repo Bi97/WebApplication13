@@ -12,13 +12,16 @@ namespace WebApplication13.Models
         public string gTenSP { get; set; }
         public int gSoLuong { get; set; }
         public double gDonGia { get; set; }
+        public double gGiamGia { get; set; }     
+        public int MaNV { get; set; }
         public double gThanhTien
         {
-            get { return gSoLuong * gDonGia; }
+            get { return gSoLuong * (gDonGia - gGiamGia) ; }
         }
-
+        
         public GioHang(int SanPhamId)
         {
+            MaNV = 0;
             gSanPhamId = SanPhamId;
             SanPham SP = db.SanPhams.Single(n => n.SanPhamId == gSanPhamId);
             gTenSP = SP.TenSP;

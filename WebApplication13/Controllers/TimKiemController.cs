@@ -24,9 +24,10 @@ namespace WebApplication13.Controllers
                              select new
                              {
                                  label = KH.TenKH,
-                                 val = KH.KhachHangId,
+                                 val = KH.TenKH,
                                  DC = KH.DiaChi,
                                  Sdt = KH.SoDT,
+                                 KHId = KH.KhachHangId,
 
                              }).ToList();
 

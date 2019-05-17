@@ -68,6 +68,7 @@ namespace WebApplication13.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            ApplicationUser dbuser = new ApplicationUser();
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -79,7 +80,8 @@ namespace WebApplication13.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    
+                                      
+                    Session["DN"] = dbuser;
                     return RedirectToLocal(Url.Action("TrangChu","Admin"));
                 case SignInStatus.LockedOut:
                     return View("Lockout");
