@@ -5,6 +5,8 @@ namespace WebApplication13.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<CTDonHang> CTDonHangs { get; set; }
+        public DbSet<CuaHang> cuaHangs { get; set; }
         public DbSet<KhachHang> KhachHangs { get; set; }
         public DbSet<DonHang> DonHangs { get; set; }
         public DbSet<SanPham> SanPhams { get; set; }

@@ -97,6 +97,9 @@ namespace WebApplication13.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
+
+        [Required]
+        public int CuaHangId { get; set; }
     }
 
     public class ResetPasswordViewModel
