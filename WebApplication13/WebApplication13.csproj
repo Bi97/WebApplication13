@@ -180,8 +180,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\Account2Controller.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\CTDonHangsController.cs" />
+    <Compile Include="Controllers\DonHangsController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\User\BanHang2Controller.cs" />
     <Compile Include="Controllers\User\BanHangController.cs" />
@@ -1696,6 +1699,16 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\alert.cshtml" />
     <Content Include="Views\BanHang2\MuaHang.cshtml" />
+    <Content Include="Views\Account2\Login.cshtml" />
+    <Content Include="Views\Layout\_LayoutDangNhapUser.cshtml" />
+    <Content Include="Views\DonHangs\Details.cshtml" />
+    <Content Include="Views\DonHangs\Index.cshtml" />
+    <Content Include="Views\CTDonHangs\Create.cshtml" />
+    <Content Include="Views\CTDonHangs\Delete.cshtml" />
+    <Content Include="Views\CTDonHangs\Details.cshtml" />
+    <Content Include="Views\CTDonHangs\Edit.cshtml" />
+    <Content Include="Views\CTDonHangs\Index.cshtml" />
+    <Content Include="Views\User\test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
