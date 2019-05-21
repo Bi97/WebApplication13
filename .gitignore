@@ -262,12 +262,3 @@ __pycache__/
 /WebApplication13/Controllers/User
 /WebApplication13/Views/BanHang
 /WebApplication13/Content
-/WebApplication13/Views/KhachHangs/Index.cshtml
-/WebApplication13/Views/KhachHangs/Edit.cshtml
-/WebApplication13/Views/KhachHangs/DSKH.cshtml
-/WebApplication13/Views/KhachHangs/Details.cshtml
-/WebApplication13/Views/KhachHangs/Delete.cshtml
-/WebApplication13/Views/KhachHangs/Create.cshtml
-/WebApplication13/Controllers/KhachHangsController.cs
-/WebApplication13/Controllers/ThongKeController.cs
-/WebApplication13/Views/ThongKe/ThongKe.cshtml
