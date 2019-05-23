@@ -111,7 +111,7 @@ namespace WebApplication13.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             KhachHang khachHang = db.KhachHangs.Find(id);
-            db.KhachHangs.Add
+            db.KhachHangs.Remove(khachHang);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
