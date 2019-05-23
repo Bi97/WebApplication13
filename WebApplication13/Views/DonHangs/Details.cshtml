@@ -1,0 +1,71 @@
+﻿
+@model IEnumerable<WebApplication13.Models.CTDonHang>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/views/layout/_layoutuser.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title" style="font-size:30px">Chi Tiết</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Mã Sản Phẩm
+                            </th>
+                            <th>
+                                Tên Sản Phẩm
+                            </th>
+                            <th>
+                                Số Lượng
+                            </th>
+                            <th>
+                                Đơn Giá
+                            </th>
+                            <th>
+                                Chiết Khấu
+                            </th>
+                            <th></th>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.SanPhamId
+                                        </td>
+                                        <td>
+                                            @item.SanPham.TenSP
+                                        </td>
+                                        <td class="col-sm-2">
+                                            @String.Format("{0:0,0}", item.SoLuong)
+                                        </td>
+
+                                        <td>
+                                            @String.Format("{0:0,0}", item.DonGia)
+                                        </td>
+                                        <td>
+                                            @String.Format("{0:0,0}", item.GiamGia)
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                }                                   
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-lg" href="@Url.Action("Index","DonHangs")">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
