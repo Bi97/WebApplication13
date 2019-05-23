@@ -182,6 +182,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\User\BanHang2Controller.cs" />
     <Compile Include="Controllers\User\BanHangController.cs" />
@@ -1696,6 +1697,11 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\alert.cshtml" />
     <Content Include="Views\BanHang2\MuaHang.cshtml" />
+    <Content Include="Views\KhachHang\Create.cshtml" />
+    <Content Include="Views\KhachHang\Delete.cshtml" />
+    <Content Include="Views\KhachHang\Details.cshtml" />
+    <Content Include="Views\KhachHang\Edit.cshtml" />
+    <Content Include="Views\KhachHang\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1705,7 +1711,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\KhachHang\" />
     <Folder Include="Views\TimKiem\" />
   </ItemGroup>
   <ItemGroup>
