@@ -404,7 +404,7 @@ namespace WebApplication13.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Login", "Account2");
         }
 
         //

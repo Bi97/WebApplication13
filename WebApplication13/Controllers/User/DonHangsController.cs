@@ -17,12 +17,16 @@ namespace WebApplication13.Controllers.User
        
         // GET: DonHangs
         public ActionResult Index()
-        {
+        {          
             var MaCH = User.TenCuaHang();
-            var donHangs = (from s in db.DonHangs
-                            where s.CuaHangId.ToString() == MaCH.ToString()
-                            select s).Include(s=>s.KhachHang).ToList();                      
-            return View(donHangs);
+            
+            
+                var donHangs = (from s in db.DonHangs
+                                where s.CuaHangId.ToString() == MaCH.ToString()
+                                select s).Include(s => s.KhachHang).ToList();
+                return View(donHangs);
+            
+            
         }
        
         public ActionResult Details(int id)
