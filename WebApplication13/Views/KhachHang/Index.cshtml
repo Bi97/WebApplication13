@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebApplication13.Models.KhachHang>
+
+@{
+   
+    Layout = "~/Views/Layout/_LayoutUser.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title" style="font-size:30px">Khách Hàng</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Tên Khách Hàng
+                            </th>
+                            <th>
+                                Số Điện Thoại
+                            </th>
+                            <th>
+                                Ngày Sinh
+                            </th>
+                            <th>
+                                Địa Chỉ
+                            </th>
+                            <th>
+
+                            </th>
+                            
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TenKH)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SoDT)
+                                        </td>
+                                        <td>
+                                            @string.Format("{0:MM/dd/yyyy}", item.NgaySinh)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DiaChi)
+
+                                        </td>
+                                      
+                                        <td>
+                                            <a class="btn btn-outline-primary" href="@Url.Action("Edit","KhachHang", new { id = item.KhachHangId })">Sửa</a>
+
+                                            <a class="btn btn-outline-primary" href="@Url.Action("Delete", "khách Hàng", new { id = item.KhachHangId })">Xoá</a>
+
+                                        </td>
+                                    </tr>
+                                
+                                }
+                               
+                            </tbody>
+                            
+                        </table>
+                        <div>
+                            <a class="btn btn-primary ; float-right" href="@Url.Action("Create", "KhachHang")">Thêm Khách Hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
