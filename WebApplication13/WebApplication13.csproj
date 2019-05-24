@@ -183,14 +183,15 @@
     <Compile Include="Controllers\Account2Controller.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\Admin\LoaiSPsController.cs" />
     <Compile Include="Controllers\CTDonHangsController.cs" />
     <Compile Include="Controllers\DonHangsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\User\BanHang2Controller.cs" />
-    <Compile Include="Controllers\User\BanHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Controllers\User\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -255,6 +256,26 @@
     <Compile Include="Migrations\201905170809327_editCTDH.Designer.cs">
       <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905231104493_update.cs" />
+    <Compile Include="Migrations\201905231104493_update.Designer.cs">
+      <DependentUpon>201905231104493_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905231121255_3\4.cs" />
+    <Compile Include="Migrations\201905231121255_3\4.Designer.cs">
+      <DependentUpon>4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905231138198_4.cs" />
+    <Compile Include="Migrations\201905231138198_4.Designer.cs">
+      <DependentUpon>201905231138198_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905231143309_6565.cs" />
+    <Compile Include="Migrations\201905231143309_6565.Designer.cs">
+      <DependentUpon>201905231143309_6565.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905231144354_656.cs" />
+    <Compile Include="Migrations\201905231144354_656.Designer.cs">
+      <DependentUpon>201905231144354_656.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -267,6 +288,7 @@
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\ViewModel\SanPhamViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1684,16 +1706,9 @@
     <Content Include="Views\Layout\_LayoutAdmin.cshtml" />
     <Content Include="Scripts\material-dashboard.js.map" />
     <Content Include="Views\Layout\_LayoutUser.cshtml" />
-    <Content Include="Views\SanPhams\Create.cshtml" />
-    <Content Include="Views\SanPhams\Delete.cshtml" />
-    <Content Include="Views\SanPhams\Details.cshtml" />
-    <Content Include="Views\SanPhams\Edit.cshtml" />
-    <Content Include="Views\SanPhams\Index.cshtml" />
-    <Content Include="Views\BanHang\BanHang.cshtml" />
     <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
     <Content Include="Views\Admin\TrangChu.cshtml" />
     <Content Include="Web.config" />
-    <Content Include="Views\BanHang\Index.cshtml" />
     <Content Include="Views\BanHang2\GioHang.cshtml" />
     <Content Include="Views\BanHang2\DS.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
@@ -1709,6 +1724,21 @@
     <Content Include="Views\CTDonHangs\Edit.cshtml" />
     <Content Include="Views\CTDonHangs\Index.cshtml" />
     <Content Include="Views\User\test.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\SanPhams\Create.cshtml" />
+    <Content Include="Views\SanPhams\Delete.cshtml" />
+    <Content Include="Views\SanPhams\Details.cshtml" />
+    <Content Include="Views\SanPhams\Edit.cshtml" />
+    <Content Include="Views\SanPhams\Index.cshtml" />
+    <Content Include="Views\LoaiSPs\Create.cshtml" />
+    <Content Include="Views\LoaiSPs\Delete.cshtml" />
+    <Content Include="Views\LoaiSPs\Details.cshtml" />
+    <Content Include="Views\LoaiSPs\Edit.cshtml" />
+    <Content Include="Views\LoaiSPs\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1718,8 +1748,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\KhachHang\" />
-    <Folder Include="Views\TimKiem\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1779,6 +1807,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905170809327_editCTDH.resx">
       <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905231104493_update.resx">
+      <DependentUpon>201905231104493_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905231121255_3\4.resx">
+      <DependentUpon>4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905231138198_4.resx">
+      <DependentUpon>201905231138198_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905231143309_6565.resx">
+      <DependentUpon>201905231143309_6565.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905231144354_656.resx">
+      <DependentUpon>201905231144354_656.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -11,10 +11,10 @@ namespace WebApplication13.Models
         public int gSanPhamId { get; set; }
         public string gTenSP { get; set; }
         public int gSoLuong { get; set; }
-        public double gDonGia { get; set; }
-        public double gGiamGia { get; set; }     
+        public float gDonGia { get; set; }
+        public float gGiamGia { get; set; }     
         public int MaNV { get; set; }
-        public double gThanhTien
+        public float gThanhTien
         {
             get { return gSoLuong * (gDonGia - gGiamGia) ; }
         }
@@ -26,7 +26,7 @@ namespace WebApplication13.Models
             SanPham SP = db.SanPhams.Single(n => n.SanPhamId == gSanPhamId);
             gTenSP = SP.TenSP;
             gSoLuong = 1;
-            gDonGia = double.Parse(SP.DonGia.ToString());
+            gDonGia = float.Parse(SP.DonGia.ToString());
         }
 
     }

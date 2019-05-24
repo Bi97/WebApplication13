@@ -10,6 +10,7 @@ namespace WebApplication13.Models
         public DbSet<KhachHang> KhachHangs { get; set; }
         public DbSet<DonHang> DonHangs { get; set; }
         public DbSet<SanPham> SanPhams { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<LoaiSP> LoaiSPs { get; set; }
         public DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public ApplicationDbContext()
