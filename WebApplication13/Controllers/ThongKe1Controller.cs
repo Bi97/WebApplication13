@@ -26,7 +26,6 @@ namespace WebApplication13.Controllers
             ViewBag.Dem = TongDH();
             ViewBag.TongSL = TongSL();
             ViewBag.TongT = TongT();
-
             return View(ThongKe);
         }
         //Toán Tử//
