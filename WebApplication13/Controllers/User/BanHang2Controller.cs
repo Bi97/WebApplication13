@@ -68,9 +68,9 @@ namespace WebApplication13.Controllers.User
             }
             return gTongSoLuong;
         }
-        private double ChietKhau()
+        private float ChietKhau()
         {
-            double gChietKhau = 0;
+            float gChietKhau = 0;
 
             List<GioHang> listGioHang = Session["GioHang"] as List<GioHang>;
             if (listGioHang != null)
@@ -80,9 +80,9 @@ namespace WebApplication13.Controllers.User
             return gChietKhau;
         }
 
-        private double TongTien()
+        private float TongTien()
         {
-            double gTongTien = 0;
+            float gTongTien = 0;
             List<GioHang> listGioHang = Session["GioHang"] as List<GioHang>;
             if (listGioHang != null)
             {
@@ -160,7 +160,7 @@ namespace WebApplication13.Controllers.User
             GioHang sanpham = listGioHang.SingleOrDefault(n => n.gSanPhamId == gSanPhamId);
             if(sanpham!=null)
             {
-                sanpham.gGiamGia = double.Parse(f["txtGiamGia"]);
+                sanpham.gGiamGia = float.Parse(f["txtGiamGia"]);
                 sanpham.gSoLuong = int.Parse(f["txtSoLuong"].ToString());
               
             }
@@ -201,6 +201,7 @@ namespace WebApplication13.Controllers.User
             db.SaveChanges();
             foreach ( var item in gh)
             {
+               
                 CTDonHang CTDH = new CTDonHang();
                 CTDH.DonhangId = DH.DonHangId;
                 CTDH.SanPhamId = item.gSanPhamId;
@@ -208,7 +209,7 @@ namespace WebApplication13.Controllers.User
                 CTDH.DonGia = item.gDonGia;
                 CTDH.GiamGia = item.gGiamGia;
                 db.CTDonHangs.Add(CTDH);
-
+              
             }
             db.SaveChanges();
             Session["GioHang"] = null;

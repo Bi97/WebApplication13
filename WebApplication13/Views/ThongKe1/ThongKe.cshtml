@@ -1,0 +1,56 @@
+﻿@Model IEnumerable<WebApplication13.Models.DonHang>
+
+    @{
+        Layout = "~/views/layout/_layoutuser.cshtml";
+    }
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title" style="font-size:30px">Thống Kê</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                <th>
+                                    Ngày Lập
+                                </th>
+                                <th>
+                                    Tổng Hoá Đơn
+                                </th>
+                                <th>
+                                    Tổng Sản Phẩm
+                                </th>
+                                <th>
+                                    Tổng Tiền
+                                </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @string.Format("{0:MM/dd/yyyy}", DateTime.Now.Date)
+                                        </td>
+                                        <td>
+                                            @string.Format("{0:0,0}", ViewBag.Dem)
+                                        </td>
+                                        <td>
+                                            @string.Format("{0:0,0}", ViewBag.TongSL)
+                                        </td>
+                                        <td>
+                                            @string.Format("{0:0,0}", ViewBag.TongT)
+                                        </td>
+
+                                    </tr>
+                                    <tr></tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
