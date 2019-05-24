@@ -276,6 +276,10 @@
     <Compile Include="Migrations\201905231144354_656.Designer.cs">
       <DependentUpon>201905231144354_656.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905241008262_long.cs" />
+    <Compile Include="Migrations\201905241008262_long.Designer.cs">
+      <DependentUpon>201905241008262_long.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -1822,6 +1826,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905231144354_656.resx">
       <DependentUpon>201905231144354_656.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905241008262_long.resx">
+      <DependentUpon>201905241008262_long.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
