@@ -5,10 +5,13 @@ namespace WebApplication13.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-
-        public DbSet<SanPham> SanPhams { get; set;  }
-        public DbSet<LoaiSP> LoaiSPs { get; set;  }
-        public DbSet<NhaCungCap> NhaCungCaps { get; set;  }
+        public DbSet<CTDonHang> CTDonHangs { get; set; }
+        public DbSet<CuaHang> cuaHangs { get; set; }
+        public DbSet<KhachHang> KhachHangs { get; set; }
+        public DbSet<DonHang> DonHangs { get; set; }
+        public DbSet<SanPham> SanPhams { get; set; }
+        public DbSet<LoaiSP> LoaiSPs { get; set; }
+        public DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

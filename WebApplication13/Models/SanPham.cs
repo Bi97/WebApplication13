@@ -15,6 +15,8 @@ namespace WebApplication13.Models
         public double SoLuong { get; set; }
         public string MoTa { get; set; }
 
+        public double DonGia { get; set; }
+        [Required]
         public NhaCungCap NhaCungCap { get; set; }
         public int NhaCungCapId { get; set; }
 
@@ -22,5 +24,6 @@ namespace WebApplication13.Models
         public LoaiSP LoaiSP { get; set; }
         [Required]
         public int LoaiSPId { get; set; }
+        
     }
 }

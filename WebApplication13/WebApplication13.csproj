@@ -182,6 +182,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
+    <Compile Include="Controllers\User\BanHang2Controller.cs" />
     <Compile Include="Controllers\User\BanHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -202,10 +204,63 @@
     <Compile Include="Migrations\201905011624376_11111.Designer.cs">
       <DependentUpon>201905011624376_11111.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905101447591_addcolum.cs" />
+    <Compile Include="Migrations\201905101447591_addcolum.Designer.cs">
+      <DependentUpon>201905101447591_addcolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905101456211_123112213.cs" />
+    <Compile Include="Migrations\201905101456211_123112213.Designer.cs">
+      <DependentUpon>201905101456211_123112213.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905121339227_2112.cs" />
+    <Compile Include="Migrations\201905121339227_2112.Designer.cs">
+      <DependentUpon>201905121339227_2112.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905140808044_6.cs" />
+    <Compile Include="Migrations\201905140808044_6.Designer.cs">
+      <DependentUpon>201905140808044_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905140816419_7.cs" />
+    <Compile Include="Migrations\201905140816419_7.Designer.cs">
+      <DependentUpon>201905140816419_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905140840219_addDonGia+Ten.cs" />
+    <Compile Include="Migrations\201905140840219_addDonGia+Ten.Designer.cs">
+      <DependentUpon>201905140840219_addDonGia+Ten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905140937191_9.cs" />
+    <Compile Include="Migrations\201905140937191_9.Designer.cs">
+      <DependentUpon>201905140937191_9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905141035212_12.cs" />
+    <Compile Include="Migrations\201905141035212_12.Designer.cs">
+      <DependentUpon>201905141035212_12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905161331256_Test.cs" />
+    <Compile Include="Migrations\201905161331256_Test.Designer.cs">
+      <DependentUpon>201905161331256_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905161552174_editdonhang.cs" />
+    <Compile Include="Migrations\201905161552174_editdonhang.Designer.cs">
+      <DependentUpon>201905161552174_editdonhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905170758069_AddCTDH.cs" />
+    <Compile Include="Migrations\201905170758069_AddCTDH.Designer.cs">
+      <DependentUpon>201905170758069_AddCTDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905170809327_editCTDH.cs" />
+    <Compile Include="Migrations\201905170809327_editCTDH.Designer.cs">
+      <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\CTDonHang.cs" />
+    <Compile Include="Models\CuaHang.cs" />
+    <Compile Include="Models\DonHang.cs" />
+    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
@@ -978,6 +1033,44 @@
     <Content Include="Content\AdminLogin\css.css" />
     <Content Include="Content\AdminLogin\font-awesome.css" />
     <Content Include="Content\AdminLogin\matrix-login.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\1.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\2.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\3.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\4.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\5.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\6.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\7.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\8.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert2.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert3.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert4.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert5.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert6.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\alert7.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\bootstrap.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\bootstrap.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\custom.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\default.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\img1.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\img2.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\img3.jpg" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\jQuery.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\jquery_002.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-icon.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-light-icon.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-light-text.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\logo-text.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\model.png" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\perfect-scrollbar.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\popper.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sidebarmenu.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sticky-kit.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\style.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sweet-alert.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sweetalert2.css" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\sweetalert2.js" />
+    <Content Include="Content\AdminWrap - Easy to Customize Bootstrap 4 Admin Template_files\waves.js" />
     <Content Include="Content\Admin\bootstrap-responsive.min.css" />
     <Content Include="Content\Admin\bootstrap-wysihtml5.css" />
     <Content Include="Content\Admin\bootstrap.min.css" />
@@ -1036,6 +1129,43 @@
     <Content Include="Content\DangNhap_files\logo-text.png" />
     <Content Include="Content\DangNhap_files\popper.js" />
     <Content Include="Content\DangNhap_files\style.css" />
+    <Content Include="Content\datatb_files\1.jpg" />
+    <Content Include="Content\datatb_files\2.jpg" />
+    <Content Include="Content\datatb_files\3.jpg" />
+    <Content Include="Content\datatb_files\4.jpg" />
+    <Content Include="Content\datatb_files\5.jpg" />
+    <Content Include="Content\datatb_files\6.jpg" />
+    <Content Include="Content\datatb_files\7.jpg" />
+    <Content Include="Content\datatb_files\8.jpg" />
+    <Content Include="Content\datatb_files\bootstrap.css" />
+    <Content Include="Content\datatb_files\bootstrap.js" />
+    <Content Include="Content\datatb_files\buttons.js" />
+    <Content Include="Content\datatb_files\buttons_002.js" />
+    <Content Include="Content\datatb_files\buttons_003.js" />
+    <Content Include="Content\datatb_files\custom.js" />
+    <Content Include="Content\datatb_files\dataTables.css" />
+    <Content Include="Content\datatb_files\dataTables.js" />
+    <Content Include="Content\datatb_files\default.css" />
+    <Content Include="Content\datatb_files\img1.jpg" />
+    <Content Include="Content\datatb_files\img2.jpg" />
+    <Content Include="Content\datatb_files\img3.jpg" />
+    <Content Include="Content\datatb_files\jquery.js" />
+    <Content Include="Content\datatb_files\jquery_002.js" />
+    <Content Include="Content\datatb_files\jquery_003.js" />
+    <Content Include="Content\datatb_files\jszip.js" />
+    <Content Include="Content\datatb_files\logo-icon.png" />
+    <Content Include="Content\datatb_files\logo-light-icon.png" />
+    <Content Include="Content\datatb_files\logo-light-text.png" />
+    <Content Include="Content\datatb_files\logo-text.png" />
+    <Content Include="Content\datatb_files\pdfmake.js" />
+    <Content Include="Content\datatb_files\perfect-scrollbar.js" />
+    <Content Include="Content\datatb_files\popper.js" />
+    <Content Include="Content\datatb_files\sidebarmenu.js" />
+    <Content Include="Content\datatb_files\sticky-kit.js" />
+    <Content Include="Content\datatb_files\style.css" />
+    <Content Include="Content\datatb_files\table-pages.css" />
+    <Content Include="Content\datatb_files\vfs_fonts.js" />
+    <Content Include="Content\datatb_files\waves.js" />
     <Content Include="Content\floating-label.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\material-dashboard-rtl.css" />
@@ -1551,20 +1681,32 @@
     <Content Include="Views\Layout\_LayoutAdmin.cshtml" />
     <Content Include="Scripts\material-dashboard.js.map" />
     <Content Include="Views\Layout\_LayoutUser.cshtml" />
-    <Content Include="Views\TrangChuUser\Index.cshtml" />
     <Content Include="Views\SanPhams\Create.cshtml" />
     <Content Include="Views\SanPhams\Delete.cshtml" />
     <Content Include="Views\SanPhams\Details.cshtml" />
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
     <Content Include="Views\BanHang\BanHang.cshtml" />
-    <Content Include="Views\BanHang\index.cshtml" />
     <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
     <Content Include="Views\Admin\TrangChu.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="Views\BanHang\Index.cshtml" />
+    <Content Include="Views\BanHang2\GioHang.cshtml" />
+    <Content Include="Views\BanHang2\DS.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\alert.cshtml" />
+    <Content Include="Views\BanHang2\MuaHang.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\TrangChuAdmin\" />
+    <Folder Include="Views\KhachHang\" />
+    <Folder Include="Views\TimKiem\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1588,6 +1730,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905011624376_11111.resx">
       <DependentUpon>201905011624376_11111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905101447591_addcolum.resx">
+      <DependentUpon>201905101447591_addcolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905101456211_123112213.resx">
+      <DependentUpon>201905101456211_123112213.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905121339227_2112.resx">
+      <DependentUpon>201905121339227_2112.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905140808044_6.resx">
+      <DependentUpon>201905140808044_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905140816419_7.resx">
+      <DependentUpon>201905140816419_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905140840219_addDonGia+Ten.resx">
+      <DependentUpon>201905140840219_addDonGia+Ten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905140937191_9.resx">
+      <DependentUpon>201905140937191_9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905141035212_12.resx">
+      <DependentUpon>201905141035212_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905161331256_Test.resx">
+      <DependentUpon>201905161331256_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905161552174_editdonhang.resx">
+      <DependentUpon>201905161552174_editdonhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905170758069_AddCTDH.resx">
+      <DependentUpon>201905170758069_AddCTDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905170809327_editCTDH.resx">
+      <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

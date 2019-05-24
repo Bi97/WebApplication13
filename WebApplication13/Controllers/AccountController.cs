@@ -68,6 +68,7 @@ namespace WebApplication13.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            ApplicationUser dbuser = new ApplicationUser();
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -79,6 +80,8 @@ namespace WebApplication13.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                                      
+                    Session["DN"] = dbuser;
                     return RedirectToLocal(Url.Action("TrangChu","Admin"));
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -139,6 +142,8 @@ namespace WebApplication13.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+             ApplicationDbContext db = new ApplicationDbContext();
+            ViewBag.CuaHangId = new SelectList(db.cuaHangs, "CuaHangId", "TenCuaHang");
             return View();
         }
 
@@ -151,7 +156,9 @@ namespace WebApplication13.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                ApplicationDbContext db = new ApplicationDbContext();
+                ViewBag.CuaHangId = new SelectList(db.cuaHangs, "CuaHangId", "TenCuaHang");
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, CuaHangId= model.CuaHangId };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -397,7 +404,7 @@ namespace WebApplication13.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index","SanPhams");
+            return RedirectToAction("Login","Account");
         }
 
         //
