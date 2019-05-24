@@ -185,6 +185,7 @@
     <Compile Include="Controllers\Admin\AdminController.cs" />
     <Compile Include="Controllers\CTDonHangsController.cs" />
     <Compile Include="Controllers\DonHangsController.cs" />
+    <Compile Include="Controllers\ThongKeController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\User\BanHang2Controller.cs" />
     <Compile Include="Controllers\User\BanHangController.cs" />
@@ -254,6 +255,10 @@
     <Compile Include="Migrations\201905170809327_editCTDH.cs" />
     <Compile Include="Migrations\201905170809327_editCTDH.Designer.cs">
       <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905240853092_testmay.cs" />
+    <Compile Include="Migrations\201905240853092_testmay.Designer.cs">
+      <DependentUpon>201905240853092_testmay.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1692,7 +1697,9 @@
     <Content Include="Views\BanHang\BanHang.cshtml" />
     <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
     <Content Include="Views\Admin\TrangChu.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\BanHang\Index.cshtml" />
     <Content Include="Views\BanHang2\GioHang.cshtml" />
     <Content Include="Views\BanHang2\DS.cshtml" />
@@ -1709,6 +1716,7 @@
     <Content Include="Views\CTDonHangs\Edit.cshtml" />
     <Content Include="Views\CTDonHangs\Index.cshtml" />
     <Content Include="Views\User\test.cshtml" />
+    <Content Include="Views\ThongKe\ThongKe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1779,6 +1787,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905170809327_editCTDH.resx">
       <DependentUpon>201905170809327_editCTDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905240853092_testmay.resx">
+      <DependentUpon>201905240853092_testmay.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

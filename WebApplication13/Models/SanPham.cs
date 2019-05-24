@@ -12,10 +12,10 @@ namespace WebApplication13.Models
         [Required]
         public string TenSP { get; set; }
         [Required]
-        public double SoLuong { get; set; }
+        public float SoLuong { get; set; }
         public string MoTa { get; set; }
 
-        public double DonGia { get; set; }
+        public float DonGia { get; set; }
         [Required]
         public NhaCungCap NhaCungCap { get; set; }
         public int NhaCungCapId { get; set; }
