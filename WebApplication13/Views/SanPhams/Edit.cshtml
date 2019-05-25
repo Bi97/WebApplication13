@@ -9,14 +9,14 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="card">
-    <div class="card-body">
-        <div class=" ml-5" style="padding-bottom:0em">
-            <div class="ml-5 form-horizontal" style="padding-right:20em">
-                <hr class="border-cyan" />
-                <h4 style="color:red ; font-size: 30px" class="text-center">Chi Tiết Sản Phẩm</h4>
-                <hr class="border-cyan" />
+
+    <div class="card">
+        <div class="card-body">
+            <div class=" ml-5" style="padding-bottom:0em">
+                <div class="ml-5 form-horizontal" style="padding-right:20em">
+                    <hr class="border-cyan" />
+                    <h4 style="color:red ; font-size: 30px" class="text-center">Chi Tiết Sản Phẩm</h4>
+                    <hr class="border-cyan" />
                     <div class="ml-5" style="padding-left:10em; color:brown">
                         <div style="font-size:18px">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -45,7 +45,13 @@
                                     @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-
+                            <div class="form-group">
+                                @Html.Label("Giá Bán", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.DonGia, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DonGia, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
                             <div class="form-group">
                                 @Html.Label("Nhà Cung Cấp", htmlAttributes: new { @class = "control-label col-md-5" })
                                 <div class="col-md-10">
@@ -68,14 +74,14 @@
                                 </div>
                             </div>
                         </div>
-                            <div>
-                                @Html.ActionLink("Danh Sách Sản Phẩm", "Index")
-                            </div>
+                        <div>
+                            @Html.ActionLink("Danh Sách Sản Phẩm", "Index")
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-                    }
+}
 
 
