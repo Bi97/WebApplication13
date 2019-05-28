@@ -183,6 +183,7 @@
     <Compile Include="Controllers\Admin\AccountController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\CTDonHangsController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\DonHangsController.cs" />
+    <Compile Include="Controllers\ThongKe1Controller.cs" />
     <Compile Include="Controllers\User\Account2Controller.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
     <Compile Include="Controllers\SanPham\ProductsController.cs" />
@@ -274,6 +275,10 @@
     <Compile Include="Migrations\201905231144354_656.cs" />
     <Compile Include="Migrations\201905231144354_656.Designer.cs">
       <DependentUpon>201905231144354_656.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905280621507_%27TongTien to float%27.cs" />
+    <Compile Include="Migrations\201905280621507_%27TongTien to float%27.Designer.cs">
+      <DependentUpon>201905280621507_%27TongTien to float%27.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1641,6 +1646,8 @@
     <Content Include="Views\SanPhams\Index.cshtml" />
     <Content Include="Views\Layout\_LayoutAdminNew.cshtml" />
     <Content Include="Views\Admin\_LayoutPage1.cshtml" />
+    <Content Include="Views\DonHangs\DHAdmin.cshtml" />
+    <Content Include="Views\ThongKe1\ThongKe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1724,6 +1731,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905231144354_656.resx">
       <DependentUpon>201905231144354_656.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905280621507_%27TongTien to float%27.resx">
+      <DependentUpon>201905280621507_%27TongTien to float%27.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
