@@ -9,8 +9,8 @@ namespace WebApplication13.Models
         [Required]
         public int SoLuongBan { get; set; }
         public string HinhThucTT { get; set; }
-        public double TongTien { get; set; }
-
+        public float TongTien { get; set; }
+        
         public DateTime NgayMua { get; set; }
 
         public KhachHang KhachHang { get; set; }

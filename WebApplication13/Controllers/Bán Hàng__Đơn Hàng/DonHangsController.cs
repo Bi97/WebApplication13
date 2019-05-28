@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using WebApplication13.Models;
 
 namespace WebApplication13.Controllers.User
@@ -31,6 +33,11 @@ namespace WebApplication13.Controllers.User
                         where s.DonhangId == id
                         select s).Include(s => s.SanPham).Include(s => s.DonHang);
             return View(CTDH);
+        }
+
+        public ActionResult DHAdmin()
+        {
+            return View();   
         }
 
         // GET: DonHangs/Details/5

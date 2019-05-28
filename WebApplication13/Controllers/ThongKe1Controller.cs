@@ -32,21 +32,40 @@ namespace WebApplication13.Controllers
         //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
         private int TongSL()
         {
+
             var MaCH = User.TenCuaHang();
-            var TongSL = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.SoLuongBan).Sum();
-            return TongSL;
+            var TongSL = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.SoLuongBan).Count();
+            if(TongSL != 0)
+            {
+                var TongSLL = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.SoLuongBan).Sum();
+                return TongSLL;
+            }
+            else
+            {
+                return TongSL;
+            }
         }
         private double TongT()
         {
             var MaCH = User.TenCuaHang();
-            var TongT = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.TongTien).Sum();
+            var TongT = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.TongTien).Count();
+            if(TongT != 0)
+            {
+                var TongTT = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.TongTien).Sum();
+                return TongTT;
+            }
+            else
+            { 
             return TongT;
+            }
         }
-        private int TongDH()
+        public int TongDH()
         {
             var MaCH = User.TenCuaHang();
             var Dem = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.DonHangId).Count();
             return Dem;
         }
+      
+        
     }
 }
