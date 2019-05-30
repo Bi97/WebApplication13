@@ -167,11 +167,14 @@
             </li>           
             <!--End Quản Ly Sản Phẩm -->
 
+
+            <!--Thống Kê-->
+
             <li class="nav-item ">
                 <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
                     <i class="material-icons">apps</i>
                     <p>
-                        Components
+                        Quản Lý Cửa Hàng
                         <b class="caret"></b>
                     </p>
                 </a>
@@ -181,20 +184,14 @@
                             <a class="nav-link" data-toggle="collapse" href="#componentsCollapse">
                                 <span class="sidebar-mini"> MLT </span>
                                 <span class="sidebar-normal">
-                                    Multi Level Collapse
+                                    Danh Sách Cửa Hàng
                                     <b class="caret"></b>
                                 </span>
                             </a>
-                            <div class="collapse" id="componentsCollapse">
-                                <ul class="nav">
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="#0">
-                                            <span class="sidebar-mini"> E </span>
-                                            <span class="sidebar-normal"> Example </span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="collapse" id="componentsCollapse">                                
+                                @Html.Action("CuaHang","Admin")                                                                                                
                             </div>
+                            
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/components/buttons.html">
@@ -208,39 +205,14 @@
                                 <span class="sidebar-normal"> Grid System </span>
                             </a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/components/panels.html">
-                                <span class="sidebar-mini"> P </span>
-                                <span class="sidebar-normal"> Panels </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/components/sweet-alert.html">
-                                <span class="sidebar-mini"> SA </span>
-                                <span class="sidebar-normal"> Sweet Alert </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/components/notifications.html">
-                                <span class="sidebar-mini"> N </span>
-                                <span class="sidebar-normal"> Notifications </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/components/icons.html">
-                                <span class="sidebar-mini"> I </span>
-                                <span class="sidebar-normal"> Icons </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/components/typography.html">
-                                <span class="sidebar-mini"> T </span>
-                                <span class="sidebar-normal"> Typography </span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </li>
+
+            <!-- End Quản Lý Cửa Hàng-->
+
+
+
 
             <!-- Quản Ly Loại Sản Phẩm -->
             <!--////////////////////////////////////////////////////////////////////-->
@@ -288,20 +260,26 @@
             </li>
             <!--End Quản Ly Loại Sản Phẩm -->
            
+
+
+
+
+
+            <!-- Thống Kê-->
             <li class="nav-item ">
                 <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
                     <i class="material-icons">place</i>
                     <p>
-                        Maps
+                        Thống Kê
                         <b class="caret"></b>
                     </p>
                 </a>
                 <div class="collapse" id="mapsExamples">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/maps/google.html">
-                                <span class="sidebar-mini"> GM </span>
-                                <span class="sidebar-normal"> Google Maps </span>
+                            <a class="nav-link" href="@Url.Action("Index","ThongKeAdmin")">
+                                <span class="sidebar-mini"> CH </span>
+                                <span class="sidebar-normal"> Thống Kê Theo Cửa Hàng </span>
                             </a>
                         </li>
                         <li class="nav-item ">
@@ -319,6 +297,7 @@
                     </ul>
                 </div>
             </li>
+            <!--End Thống Kê-->
             <li class="nav-item ">
                 <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard-pro/examples/widgets.html">
                     <i class="material-icons">widgets</i>

@@ -8,7 +8,7 @@ using WebApplication13.Models;
 
 namespace WebApplication13.Controllers
 {
-    public class ThongKe1Controller : Controller
+    public class ThongKeUserController : Controller
     {
         // GET: ThongKe1
 
