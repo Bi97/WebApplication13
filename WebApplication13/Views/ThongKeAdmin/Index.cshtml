@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication13.Models.CuaHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_LayoutAdminNew.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-header-info">
+                        <div class="card-icon">
+                            <div style="font-size:35px" class="font-weight-bolder">
+                                <i class="material-icons">add_circle_outline</i>
+                                Danh Sách Cửa Hàng
+                            </div>
+                            <div class="ripple-container"></div>
+                        </div>
+                    </div>
+                    <div class="card-body ml-5 col-md-10 mt-3">
+                        <div class="table-responsive">
+                            <table class="table" style="font-size:18px">
+                                <thead class=" text-primary">
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.TenCuaHang)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.DiaChi)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr class="text-dark">
+                                            <td style="color:black">
+                                                <a class="text" href="@Url.Action("CuaHang","ThongKeAdmin", new { id = item.CuaHangId })">@item.TenCuaHang</a>
+                                                @Html.DisplayFor(modelItem => item.TenCuaHang)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DiaChi)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.CuaHangId }) |
+                                                @Html.ActionLink("Details", "Details", new { id = item.CuaHangId }) |
+                                                @Html.ActionLink("Delete", "Delete", new { id = item.CuaHangId })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>

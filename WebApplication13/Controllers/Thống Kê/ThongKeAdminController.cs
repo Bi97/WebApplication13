@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using WebApplication13.Models;
+
+namespace WebApplication13.Controllers.Thống_Kê
+{
+    public class ThongKeAdminController : Controller
+    {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
+        // GET: ThongKeAdmin
+        public ActionResult Index()
+        {
+            var CuaHang = db.cuaHangs;  
+            return View(CuaHang.ToList());
+        }
+        public ActionResult CuaHang(int id)
+        {
+            var donHangs = (from s in db.DonHangs
+                            where s.CuaHangId.ToString() == id.ToString()
+                            select s).Include(s => s.KhachHang).ToList();
+            return View(donHangs);
+        }
+    }
+}
