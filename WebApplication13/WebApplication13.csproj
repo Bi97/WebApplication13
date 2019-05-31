@@ -181,6 +181,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\Admin\AccountController.cs" />
+    <Compile Include="Controllers\Admin\CuaHangController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\CTDonHangsController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\DonHangsController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeAdminController.cs" />
@@ -1226,6 +1227,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="img\angular.png" />
     <Content Include="img\apple-icon.png" />
+    <Content Include="img\avt_empty.jpeg" />
     <Content Include="img\breadcrumb.png" />
     <Content Include="img\cover.jpg" />
     <Content Include="img\demo\av1.jpg" />
@@ -1646,12 +1648,17 @@
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
     <Content Include="Views\Layout\_LayoutAdminNew.cshtml" />
-    <Content Include="Views\Admin\_LayoutPage1.cshtml" />
     <Content Include="Views\DonHangs\DHAdmin.cshtml" />
     <Content Include="Views\ThongKeUser\ThongKe.cshtml" />
     <Content Include="Views\ThongKeAdmin\Index.cshtml" />
     <Content Include="Views\ThongKeAdmin\CuaHang.cshtml" />
     <Content Include="Views\Admin\CuaHang.cshtml" />
+    <Content Include="Views\Layout\_LayoutCuaHang.cshtml" />
+    <Content Include="Views\CuaHang\Index.cshtml" />
+    <Content Include="Views\CuaHang\DonHang.cshtml" />
+    <Content Include="Views\CuaHang\DSDonHang.cshtml" />
+    <Content Include="Views\Admin\TKCuaHang.cshtml" />
+    <Content Include="Views\ThongKeAdmin\TKCuaHang.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

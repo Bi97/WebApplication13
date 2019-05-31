@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebApplication13.Models.CuaHang>
+@foreach (var item in Model)
+{
+    <ul class="nav">
+        <li class="nav-item ">
+            <a class="nav-link" href="@Url.Action("TKCuaHang","ThongKeAdmin",new { id = item.CuaHangId })">
+                <span class="sidebar-mini"> CH </span>
+                <span class="sidebar-normal"> @item.TenCuaHang </span>
+            </a>
+        </li>
+    </ul>
+}

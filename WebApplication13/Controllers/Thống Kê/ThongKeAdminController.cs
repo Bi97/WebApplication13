@@ -15,17 +15,18 @@ namespace WebApplication13.Controllers.Thống_Kê
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ThongKeAdmin
-        public ActionResult Index()
+        public ActionResult TKCuaHang(int id)
         {
-            var CuaHang = db.cuaHangs;  
-            return View(CuaHang.ToList());
-        }
-        public ActionResult CuaHang(int id)
-        {
-            var donHangs = (from s in db.DonHangs
-                            where s.CuaHangId.ToString() == id.ToString()
-                            select s).Include(s => s.KhachHang).ToList();
-            return View(donHangs);
+            
+            var TongSL = (from s in db.DonHangs where s.CuaHangId == id select s.SoLuongBan).Sum();
+            var TongT = (from s in db.DonHangs where s.CuaHangId == id select s.TongTien).Sum();
+            var Dem = (from s in db.DonHangs where s.CuaHangId == id select s.DonHangId).Count();
+
+
+            ViewBag.TongT = TongT;
+            ViewBag.TongSL = TongSL;
+            ViewBag.TongDH = Dem;
+            return View();
         }
     }
 }

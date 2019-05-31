@@ -38,10 +38,9 @@
                 <div class="card-body">
 
                     <hr class="border-cyan" />
-
-
                     <h5 class="card-title; text-center" style="font-size:30px; color:red    ">Danh Sách Sản Phẩm</h5>
                     <hr class="border-cyan" />
+                    @ViewBag.message
                     <div class="table-responsive">
                         <table id="zero_config" class="table table-striped table-bordered">
                             <thead style="background-color:lightcyan;font-size:18px " class="text-center">
@@ -86,15 +85,14 @@
                                         <td>
                                             <a class="btn btn-outline-danger" alt="alert" id="model-error-icon" href="@Url.Action("ThemGioHang","BanHang2", new { @gSanPhamId = item.SanPhamId, @strURL= Request.Url.ToString()})">Chọn Sản Phẩm</a>
                                         </td>
-
-
                                     </tr>
                                 }
                             </tbody>
-
                         </table>
                     </div>
                     <hr class="border-cyan" />
+                    <a class="btn btn-outline-danger float-left btn-lg" href="@Url.Action("Index","User")"> Về Trang Chủ</a>
+
                     <a class="btn btn-outline-danger float-right btn-lg" href="@Url.Action("GioHang","BanHang2")"> Tiếp Tục</a>
 
                 </div>

@@ -23,49 +23,23 @@ namespace WebApplication13.Controllers
 
                            select s).Include(s => s.KhachHang).ToList();
 
-            ViewBag.Dem = TongDH();
-            ViewBag.TongSL = TongSL();
-            ViewBag.TongT = TongT();
+           
+            var Dem = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.DonHangId).Count();
+            if( Dem !=0)
+            {
+                var TongSL = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.SoLuongBan).Sum();
+                var TongT = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.TongTien).Sum();
+                ViewBag.TongSL = TongSL;
+                ViewBag.TongT = TongT;
+            }
+            else
+            {
+                ViewBag.TongSL = 0;
+                ViewBag.TongT = 0;
+            }
+            ViewBag.Dem = Dem;
+            
             return View(ThongKe);
         }
-        //Toán Tử//
-        //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-        private int TongSL()
-        {
-
-            var MaCH = User.TenCuaHang();
-            var TongSL = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.SoLuongBan).Count();
-            if(TongSL != 0)
-            {
-                var TongSLL = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.SoLuongBan).Sum();
-                return TongSLL;
-            }
-            else
-            {
-                return TongSL;
-            }
-        }
-        private double TongT()
-        {
-            var MaCH = User.TenCuaHang();
-            var TongT = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.TongTien).Count();
-            if(TongT != 0)
-            {
-                var TongTT = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.TongTien).Sum();
-                return TongTT;
-            }
-            else
-            { 
-            return TongT;
-            }
-        }
-        public int TongDH()
-        {
-            var MaCH = User.TenCuaHang();
-            var Dem = (from s in db.DonHangs where s.CuaHangId.ToString() == MaCH.ToString() && s.NgayMua.Day == DateTime.Now.Day select s.DonHangId).Count();
-            return Dem;
-        }
-      
-        
     }
 }

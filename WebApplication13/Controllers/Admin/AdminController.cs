@@ -21,5 +21,10 @@ namespace WebApplication13.Controllers.Admin
             var CuaHang = db.cuaHangs;
             return PartialView(CuaHang.ToList());
         }
+        public ActionResult TKCuaHang()
+        {
+            var CuaHang = db.cuaHangs;
+            return PartialView(CuaHang.ToList());
+        }
     }
 }

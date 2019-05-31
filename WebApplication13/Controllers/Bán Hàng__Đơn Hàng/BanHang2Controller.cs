@@ -42,9 +42,8 @@ namespace WebApplication13.Controllers.User
             {
                 sanpham = new GioHang(gSanPhamId);
                 listGioHang.Add(sanpham);
-                ViewData["success"] = "Them Thanh Cong";
-                return Redirect(strURL);
-                
+                ViewBag.message = "Them Thanh Cong";
+                return Redirect(strURL);               
             }
             else
             {
@@ -199,6 +198,9 @@ namespace WebApplication13.Controllers.User
             ViewBag.TongTien = TongTien();
             db.DonHangs.Add(DH);
             db.SaveChanges();
+
+            SanPham SP = new SanPham();
+            SP.sa
             foreach ( var item in gh)
             {
                
