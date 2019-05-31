@@ -262,5 +262,4 @@ __pycache__/
 /WebApplication13/Controllers/User
 /WebApplication13/Views/BanHang
 /WebApplication13/Content
-/WebApplication13/Views/ThongKe/ThongKe.cshtml
-/WebApplication13/Controllers/ThongKeController.cs
+

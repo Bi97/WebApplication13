@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WebApplication13.Models.CuaHang>
+@foreach (var item in Model)
+{
+    <li class="nav-item ">
+
+        <a class="nav-link" href="@Url.Action("DonHang","CuaHang", new { id = item.CuaHangId })">
+            <i class="material-icons">timeline</i>
+            <p> Danh Sách Đơn Hàng </p>
+        </a>
+    </li>
+}

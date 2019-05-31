@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebApplication13.Models.DonHang>
+
+@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Views/Layout/_LayoutCuaHang.cshtml";
+}
+
+<h2>DonHang</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-icon card-header-info">
+                    <div class="card-icon">
+                        <div style="font-size:40px" class="font-weight-bolder">
+                            Danh Sách Sản Phẩm
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <hr />
+                    <div class="material-datatables">
+                        <div class="table-responsive">
+                            <table id="zero_config" class="table table-striped table-bordered">
+                                <thead style="background-color:bisque;font-size:25px " class="text-center">
+                                    <tr>
+                                        <th>
+                                            Mã Đơn Hàng
+                                        </th>
+                                        <th>
+                                            Tên Khách Hàng
+                                        </th>
+                                        <th>
+                                            Số Sản Phẩm
+                                        </th>
+                                        <th>
+                                            Tổng Tiền
+                                        </th>
+                                        <th>
+                                            Ngày Lập
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @item.DonHangId
+                                            </td>
+                                            <td>
+                                              
+                                            </td>
+                                            <td class="col-sm-2">
+                                                @String.Format("{0:0,0}", item.SoLuongBan)
+                                            </td>
+
+                                            <td>
+                                                @String.Format("{0:0,0}", item.TongTien)
+                                            </td>
+                                            <td>
+                                                @item.NgayMua
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-outline-primary" href="@Url.Action("Details","DonHangs", new { id = item.DonHangId })">Chi Tiết</a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
