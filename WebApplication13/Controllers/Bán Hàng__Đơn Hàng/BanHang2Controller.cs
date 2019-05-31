@@ -200,7 +200,7 @@ namespace WebApplication13.Controllers.User
             db.SaveChanges();
 
             SanPham SP = new SanPham();
-            SP.sa
+           
             foreach ( var item in gh)
             {
                

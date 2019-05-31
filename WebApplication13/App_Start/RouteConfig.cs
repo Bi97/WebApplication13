@@ -12,7 +12,10 @@ namespace WebApplication13
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //Account
+            
 
+            //default
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

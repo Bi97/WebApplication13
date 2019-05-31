@@ -9,7 +9,7 @@ namespace WebApplication13.Controllers.Admin
     public class GioiThieuController : Controller
     {
         // GET: GioiThieu
-        public ActionResult Index()
+        public ActionResult TrangGioiThieu()
         {
             return View();
         }
