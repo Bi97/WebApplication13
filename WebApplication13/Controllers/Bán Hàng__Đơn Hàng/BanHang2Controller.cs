@@ -199,8 +199,7 @@ namespace WebApplication13.Controllers.User
             db.DonHangs.Add(DH);
             db.SaveChanges();
 
-            SanPham SP = new SanPham();
-            SP.sa
+            
             foreach ( var item in gh)
             {
                
