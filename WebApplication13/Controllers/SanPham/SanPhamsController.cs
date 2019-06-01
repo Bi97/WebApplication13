@@ -28,7 +28,7 @@ namespace WebApplication13.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SanPham sanPham = db.SanPhams.Find(id);
+            SanPhamsController sanPham = db.SanPhams.Find(id);
             if (sanPham == null)
             {
                 return HttpNotFound();
@@ -49,7 +49,7 @@ namespace WebApplication13.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SanPhamId,TenSP,SoLuong,MoTa,DonGia,NhaCungCapId,LoaiSPId")] SanPham sanPham)
+        public ActionResult Create([Bind(Include = "SanPhamId,TenSP,SoLuong,MoTa,DonGia,NhaCungCapId,LoaiSPId")] SanPhamsController sanPham)
         {
             if (ModelState.IsValid)
             {
