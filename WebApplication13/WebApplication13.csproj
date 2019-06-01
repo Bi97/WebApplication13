@@ -184,6 +184,7 @@
     <Compile Include="Controllers\Admin\CuaHangController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\CTDonHangsController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\DonHangsController.cs" />
+    <Compile Include="Controllers\SanPham\LoaiSPsController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeAdminController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeUserController.cs" />
     <Compile Include="Controllers\User\Account2Controller.cs" />
@@ -1659,6 +1660,16 @@
     <Content Include="Views\CuaHang\DSDonHang.cshtml" />
     <Content Include="Views\Admin\TKCuaHang.cshtml" />
     <Content Include="Views\ThongKeAdmin\TKCuaHang.cshtml" />
+    <Content Include="Views\LoaiSPs\Create.cshtml" />
+    <Content Include="Views\LoaiSPs\Delete.cshtml" />
+    <Content Include="Views\LoaiSPs\Details.cshtml" />
+    <Content Include="Views\LoaiSPs\Edit.cshtml" />
+    <Content Include="Views\LoaiSPs\Index.cshtml" />
+    <Content Include="Views\NhaCungCaps\Create.cshtml" />
+    <Content Include="Views\NhaCungCaps\Delete.cshtml" />
+    <Content Include="Views\NhaCungCaps\Details.cshtml" />
+    <Content Include="Views\NhaCungCaps\Edit.cshtml" />
+    <Content Include="Views\NhaCungCaps\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
