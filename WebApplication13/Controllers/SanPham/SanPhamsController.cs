@@ -22,26 +22,15 @@ namespace WebApplication13.Controllers
         }
 
         // GET: SanPhams/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            SanPham sanPham = db.SanPhams.Find(id);
-            if (sanPham == null)
-            {
-                return HttpNotFound();
-            }
-            return View(sanPham);
-        }
+      
 
         // GET: SanPhams/Create
+        [ActionName("Them-San-Pham")]
         public ActionResult Create()
         {
             ViewBag.LoaiSPId = new SelectList(db.LoaiSPs, "LoaiSPId", "TenLoai");
             ViewBag.NhaCungCapId = new SelectList(db.NhaCungCaps, "NhaCungCapId", "TenNhaCungCap");
-            return View();
+            return View("Create");
         }
 
         // POST: SanPhams/Create
