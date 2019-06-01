@@ -185,6 +185,7 @@
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\CTDonHangsController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\DonHangsController.cs" />
     <Compile Include="Controllers\SanPham\LoaiSPsController.cs" />
+    <Compile Include="Controllers\SanPham\NhaCungCapsController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeAdminController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeUserController.cs" />
     <Compile Include="Controllers\User\Account2Controller.cs" />
