@@ -20,22 +20,7 @@ namespace WebApplication13.Controllers
             
             return View(db.KhachHangs.ToList());
         }
-
-        // GET: KhachHang/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            KhachHang khachHang = db.KhachHangs.Find(id);
-            if (khachHang == null)
-            {
-                return HttpNotFound();
-            }
-            return View(khachHang);
-        }
-
+   
         // GET: KhachHang/Create
         public ActionResult Create()
         {
@@ -124,5 +109,15 @@ namespace WebApplication13.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult LSMuaHang(int id)
+        {
+            var LS = (from s in db.DonHangs
+                     where s.KhachHangId == id
+                     select s).Include(s =>s.KhachHang);
+            return View(LS.ToList());
+        }
+
+
     }
 }
