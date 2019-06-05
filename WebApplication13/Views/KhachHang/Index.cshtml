@@ -16,48 +16,51 @@
                     <div class="table-responsive">
                         <table class="table">
                             <thead class=" text-primary">
-                            <th>
-                                Tên Khách Hàng
-                            </th>
-                            <th>
-                                Số Điện Thoại
-                            </th>
-                            <th>
-                                Ngày Sinh
-                            </th>
-                            <th>
-                                Địa Chỉ
-                            </th>
-                            <th>
-
-                            </th>
-                            
+                                <tr>
+                                    <th>
+                                        Tên Khách Hàng
+                                    </th>
+                                    <th>
+                                        Số Điện Thoại
+                                    </th>
+                                    <th>
+                                        Ngày Sinh
+                                    </th>
+                                    <th>
+                                        Địa Chỉ
+                                    </th>
+                                    <th></th>
+                                
+                                </tr>
                             </thead>
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.TenKH)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.SoDT)
-                                        </td>
-                                        <td>
-                                            @string.Format("{0:MM/dd/yyyy}", item.NgaySinh)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.DiaChi)
+                                <tr style="font-size:17px">
+                                    <td class="title">
+                                        <a class="link; ml-3" href="@Url.Action("LSMuaHang","KhachHang", new { id = item.KhachHangId })">@item.TenKH</a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SoDT)
+                                    </td>
+                                    <td>
+                                        @string.Format("{0:MM/dd/yyyy}", item.NgaySinh)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DiaChi)
 
-                                        </td>
-                                      
-                                        <td>
-                                            <a class="btn btn-outline-primary" href="@Url.Action("Edit","KhachHang", new { id = item.KhachHangId })">Sửa</a>
+                                    </td>
 
-                                            <a class="btn btn-outline-primary" href="@Url.Action("Delete", "khách Hàng", new { id = item.KhachHangId })">Xoá</a>
+                                    <td>
+                                        <a href="@Url.Action("Edit","KhachHang", new { id = item.KhachHangId })" class="btn btn-outline-primary btn-round" data-original-title="" title="">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="@Url.Action("Delete", "khách Hàng", new { id = item.KhachHangId })" class="btn btn-outline-primary btn-round" data-original-title="" title="">
+                                            <i class="material-icons">close</i>
+                                        </a>
+                                    </td>
 
-                                        </td>
-                                    </tr>
+                                </tr>
                                 
                                 }
                                
