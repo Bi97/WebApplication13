@@ -190,7 +190,6 @@
     <Compile Include="Controllers\Thống Kê\ThongKeUserController.cs" />
     <Compile Include="Controllers\User\Account2Controller.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
-    <Compile Include="Controllers\SanPham\ProductsController.cs" />
     <Compile Include="Controllers\SanPham\SanPhamsController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\BanHang2Controller.cs" />

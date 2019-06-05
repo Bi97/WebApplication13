@@ -15,6 +15,7 @@ namespace WebApplication13.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: SanPhams
+        [ActionName("Trang-Chu")]
         public ActionResult Index()
         {
             var sanPhams = db.SanPhams.Include(s => s.LoaiSP).Include(s => s.NhaCungCap);
@@ -22,15 +23,27 @@ namespace WebApplication13.Controllers
         }
 
         // GET: SanPhams/Details/5
-      
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SanPham sanPham = db.SanPhams.Find(id);
+            if (sanPham == null)
+            {
+                return HttpNotFound();
+            }
+            return View(sanPham);
+        }
 
         // GET: SanPhams/Create
-        [ActionName("Them-San-Pham")]
+        [ActionName("Trang-Chu")]
         public ActionResult Create()
         {
             ViewBag.LoaiSPId = new SelectList(db.LoaiSPs, "LoaiSPId", "TenLoai");
             ViewBag.NhaCungCapId = new SelectList(db.NhaCungCaps, "NhaCungCapId", "TenNhaCungCap");
-            return View("Create");
+            return View();
         }
 
         // POST: SanPhams/Create
