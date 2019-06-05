@@ -16,8 +16,7 @@ namespace WebApplication13.Controllers.Admin
         {
             ViewBag.Message = "Thông Tin Cửa Hàng " + id;
             return View();
-        }
-       
+        }     
         /* public ActionResult DonHang(int id)
          {
              var DH = from s in db.DonHangs

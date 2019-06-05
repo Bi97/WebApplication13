@@ -22,19 +22,7 @@ namespace WebApplication13.Controllers
         }
 
         // GET: SanPhams/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            SanPham sanPham = db.SanPhams.Find(id);
-            if (sanPham == null)
-            {
-                return HttpNotFound();
-            }
-            return View(sanPham);
-        }
+      
 
         // GET: SanPhams/Create
         public ActionResult Create()
