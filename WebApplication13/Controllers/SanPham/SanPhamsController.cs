@@ -25,12 +25,11 @@ namespace WebApplication13.Controllers
       
 
         // GET: SanPhams/Create
-        [ActionName("Them-San-Pham")]
         public ActionResult Create()
         {
             ViewBag.LoaiSPId = new SelectList(db.LoaiSPs, "LoaiSPId", "TenLoai");
             ViewBag.NhaCungCapId = new SelectList(db.NhaCungCaps, "NhaCungCapId", "TenNhaCungCap");
-            return View("Create");
+            return View();
         }
 
         // POST: SanPhams/Create
