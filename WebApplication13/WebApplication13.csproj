@@ -183,7 +183,6 @@
     <Compile Include="Controllers\Admin\AccountController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\CTDonHangsController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\DonHangsController.cs" />
-    <Compile Include="Controllers\GioiThieuController.cs" />
     <Compile Include="Controllers\SanPham\LoaiSPsController.cs" />
     <Compile Include="Controllers\User\Account2Controller.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
