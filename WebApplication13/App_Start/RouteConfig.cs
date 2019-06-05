@@ -12,10 +12,19 @@ namespace WebApplication13
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+           
+         
+            //------------------------------Sản Phẩm---------------------------//
+            routes.MapRoute(
+              name: "SanPham",
+              url: "San-Pham/{Action}",
+              defaults: new { controller = "SanPhams", action = "Index", id = UrlParameter.Optional }
+          );
 
-          
-          
-            //default
+         //=====================================Thống Kê=============================================================//
+         
+
+            //------------------------------default---------------------
             routes.MapRoute(
                 name: "TrangChuAdmin",
                 url: "Admin/{action}",
@@ -32,9 +41,12 @@ namespace WebApplication13
             //default
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{Controller}/{action}",
                 defaults: new { controller = "Account", action = "login", id = UrlParameter.Optional }
             );
+
+
+
         }
     }
 }
