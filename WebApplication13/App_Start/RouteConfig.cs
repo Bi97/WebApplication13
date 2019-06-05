@@ -13,6 +13,16 @@ namespace WebApplication13
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+          
+          
+            //default
+            routes.MapRoute(
+                name: "TrangChuAdmin",
+                url: "Admin/{action}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+
+            //default
             routes.MapRoute(
                 name: "TrangChuAdmin",
                 url: "Admin/{action}",
