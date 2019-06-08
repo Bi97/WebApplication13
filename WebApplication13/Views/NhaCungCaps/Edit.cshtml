@@ -1,0 +1,69 @@
+﻿@model WebApplication13.Models.NhaCungCap
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Layout/_LayoutUser.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon card-header-info">
+                        <div class="card-icon">
+                            <div style="font-size:35px" class="font-weight-bolder">
+                                <i class="material-icons">add_circle_outline</i>
+                                Nhà Cung Cấp
+                            </div>
+                            <div class="ripple-container"></div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="card-body">
+                            <div style="font-size:18px" class="col-md-10 ml-auto mr-5">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(model => model.NhaCungCapId)
+                                <div class="row mt-1">
+                                    <label class="col-sm-2 col-form-label"> Tên Nhà C.Cấp :</label>
+                                    <div class="col-sm-7">
+                                        <div class="form-group bmd-form-group">
+                                            @Html.EditorFor(model => model.TenNhaCungCap, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.TenNhaCungCap, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <label class="col-sm-2 col-form-label"> Địa Chỉ :</label>
+                                    <div class="col-sm-7">
+                                        <div class="form-group bmd-form-group">
+                                            @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <label class="col-sm-2 col-form-label">Chú Thích :</label>
+                                    <div class="col-sm-7">
+                                        <div class="form-group bmd-form-group">
+                                            <input class="form-control" type="text" name="MoTa" minlength="5" required="true" aria-required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <div class="col-md-offset-2 col-md-10 mt-5 mb-5">
+                                        <a class="btn btn-outline-danger btn-lg float-left" href="@Url.Action("Index","NhaCungCaps")"> Trở Về</a>
+                                        <input type="submit" value="Lưu Thay Đổi" class="btn btn-outline-danger btn-lg float-right" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
