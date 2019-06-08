@@ -27,6 +27,34 @@ namespace WebApplication13
             //------------------------------default---------------------//
 
             routes.MapRoute(
+                name: "TrangChuAdmin",
+                url: "Admin/{action}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+
+            //default
+            routes.MapRoute(
+                name: "TrangChuAdmin",
+                url: "Admin/{action}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+
+            //default
+            routes.MapRoute(
+                name: "TrangChuAdmin",
+                url: "Admin/{action}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+
+            //default
+            routes.MapRoute(
+                name: "TrangChuAdmin",
+                url: "Admin/{action}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+
+            //default
+            routes.MapRoute(
                 name: "Default",
                 url: "{Controller}/{action}/{id}",
                 defaults: new { controller = "Account", action = "login", id = UrlParameter.Optional }

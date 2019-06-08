@@ -199,8 +199,7 @@ namespace WebApplication13.Controllers.User
             db.DonHangs.Add(DH);
             db.SaveChanges();
 
-
-
+            
             foreach ( var item in gh)
             {
                
@@ -219,7 +218,6 @@ namespace WebApplication13.Controllers.User
         }
         //Danh Sách Sản Phẩm
         //======================================================================//
-      
         public ActionResult DS()
         {
             var sanpham = db.SanPhams.Include(s => s.LoaiSP).Include(s => s.NhaCungCap);
