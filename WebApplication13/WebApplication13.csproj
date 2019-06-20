@@ -1659,6 +1659,17 @@
     <Content Include="Views\CuaHang\DSDonHang.cshtml" />
     <Content Include="Views\Admin\TKCuaHang.cshtml" />
     <Content Include="Views\ThongKeAdmin\TKCuaHang.cshtml" />
+    <Content Include="Views\LoaiSPs\Create.cshtml" />
+    <Content Include="Views\LoaiSPs\Delete.cshtml" />
+    <Content Include="Views\LoaiSPs\Details.cshtml" />
+    <Content Include="Views\LoaiSPs\Edit.cshtml" />
+    <Content Include="Views\LoaiSPs\Index.cshtml" />
+    <Content Include="Views\NhaCungCaps\Create.cshtml" />
+    <Content Include="Views\NhaCungCaps\Delete.cshtml" />
+    <Content Include="Views\NhaCungCaps\Details.cshtml" />
+    <Content Include="Views\NhaCungCaps\Edit.cshtml" />
+    <Content Include="Views\NhaCungCaps\Index.cshtml" />
+    <Content Include="Views\GioiThieu\Index.cshtml" />
     <Content Include="Views\KhachHang\Create.cshtml" />
     <Content Include="Views\KhachHang\Delete.cshtml" />
     <Content Include="Views\KhachHang\Edit.cshtml" />
