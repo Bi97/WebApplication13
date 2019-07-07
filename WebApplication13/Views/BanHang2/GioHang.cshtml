@@ -85,7 +85,7 @@
                                         <th>Tên Sản Phẩm</th>
                                         <th>Mô Tả</th>
                                         <th>Số Lượng</th>
-                                        <th>Đơn Giá</th>s
+                                        <th>Đơn Giá</th>
                                         <th>Chiết Khấu</th>
                                         <th>Tổng Tiền</th>
                                         <th></th>
@@ -144,12 +144,7 @@
                         <!--Thẻ-->
                         <!--=======================================================================================-->
 
-                       
-                        @using Microsoft.AspNet.Identity
-                        @if (Request.IsAuthenticated)
-                        {
-                            @Html.Name(User.TenCuaHang())
-                        }
+                    
                         <div>
                             <a class="btn btn-info btn-lg float-left" href="@Url.Action("DS", "BanHang2")">Trở Lại</a>
                             <a class="btn btn-info btn-lg float-right" href="@Url.Action("MuaHang", "BanHang2")">Tiếp Tục</a>

@@ -184,7 +184,10 @@
     <Compile Include="Controllers\Admin\CuaHangController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\CTDonHangsController.cs" />
     <Compile Include="Controllers\Bán Hàng__Đơn Hàng\DonHangsController.cs" />
+    <Compile Include="Controllers\GioiThieuController.cs" />
     <Compile Include="Controllers\KhachHangController.cs" />
+    <Compile Include="Controllers\SanPham\LoaiSPsController.cs" />
+    <Compile Include="Controllers\SanPham\NhaCungCapsController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeAdminController.cs" />
     <Compile Include="Controllers\Thống Kê\ThongKeUserController.cs" />
     <Compile Include="Controllers\User\Account2Controller.cs" />
@@ -1621,7 +1624,9 @@
     <Content Include="Views\Layout\_LayoutUser.cshtml" />
     <Content Include="Views\Layout\_LayoutDangNhapAdmin.cshtml" />
     <Content Include="Views\Admin\TrangChu.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\BanHang2\GioHang.cshtml" />
     <Content Include="Views\BanHang2\DS.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
