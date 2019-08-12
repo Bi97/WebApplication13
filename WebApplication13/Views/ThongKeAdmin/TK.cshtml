@@ -1,0 +1,106 @@
+﻿@model IEnumerable<WebApplication13.Models.DonHang>
+
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_LayoutAdminNew.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-icon card-header-info">
+                    <div class="card-icon">
+                        <div style="font-size:40px" class="font-weight-bolder">
+                            Thống Kê Doanh Số
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+               
+                    <hr />
+                    <div class="material-datatables">
+                        <div class="table-responsive">
+                            <table id="zero_config" class="table table-striped table-bordered">
+                                <thead style="background-color:bisque;font-size:25px " class="text-center">
+                                    <tr>
+                                        <th>Mã Sản Phẩm</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Nhà Cung Cấp</th>
+                                        <th>Loại Sản Phẩm</th>
+                                        <th>Số Lượng</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CuaHang.TenCuaHang)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SoLuongBan)
+                                        </td>
+
+                                        <td>
+                                            @string.Format("{0:0,0}", item.TongTien)
+                                        </td>
+                                        <td>
+                                            @string.Format("{0:dd/MM/yyyy}", item.NgayMua)
+                                        </td>
+
+
+
+                                    </tr>
+                                    }
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- .right-sidebar -->
+        <!-- ============================================================== -->
+        <!-- End Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Wrapper -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+        <script src="~/Admin/assets/libs/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <!-- this page js -->
+        <script src="~/Admin/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+        <script src="~/Admin/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+        <script src="~/Admin/assets/extra-libs/DataTables/datatables.min.js"></script>
+        <script>
+            /****************************************
+             *       Basic Table                   *
+             ****************************************/
+            $('#zero_config').DataTable();
+        </script>

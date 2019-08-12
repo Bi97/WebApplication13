@@ -51,10 +51,9 @@
                                                 <a href="@Url.Action("Edit","NhaCungCaps",new { id = item.NhaCungCapId })" class="btn btn-info btn-round" data-original-title="" title="">
                                                     <i class="material-icons">edit</i>
                                                 </a>
-
-                                                <button type="button" rel="tooltip" class="btn btn-danger btn-round" data-original-title="" title="">
+                                                <a  href="@Url.Action("Delete","NhaCungCaps",new { id = item.NhaCungCapId })" class="btn btn-danger btn-round" data-original-title="" title="">
                                                     <i class="material-icons">close</i>
-                                                </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     }

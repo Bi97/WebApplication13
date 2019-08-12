@@ -28,5 +28,12 @@ namespace WebApplication13.Controllers.Thống_Kê
             ViewBag.TongDH = Dem;
             return View();
         }
+        public ActionResult TK()
+        {
+            var Tk = db.DonHangs.Include(a=>a.CuaHang).Include(a=>a.KhachHang);
+           
+            
+            return View(Tk.ToList());
+        }
     }
 }

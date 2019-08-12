@@ -1642,11 +1642,6 @@
     <Content Include="Views\CTDonHangs\Edit.cshtml" />
     <Content Include="Views\CTDonHangs\Index.cshtml" />
     <Content Include="Views\User\test.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\SanPhams\Create.cshtml" />
     <Content Include="Views\SanPhams\Delete.cshtml" />
     <Content Include="Views\SanPhams\Details.cshtml" />
@@ -1680,6 +1675,7 @@
     <Content Include="Views\KhachHang\Edit.cshtml" />
     <Content Include="Views\KhachHang\Index.cshtml" />
     <Content Include="Views\KhachHang\LSMuaHang.cshtml" />
+    <Content Include="Views\ThongKeAdmin\TK.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
